@@ -27,22 +27,13 @@
 
         #blueFont1 {
             color: dodgerblue;
+            margin-left: 40px;
         }
         #blueFont2 {
             color: dodgerblue;
+            margin-left: 40px;
         }
         #blueFont3 {
-            color: dodgerblue;
-        }
-        #blueFont4 {
-            color: dodgerblue;
-            margin-left: 40px;
-        }
-        #blueFont5 {
-            color: dodgerblue;
-            margin-left: 40px;
-        }
-        #blueFont6 {
             color: dodgerblue;
             margin-left: 40px;
         }
@@ -51,29 +42,30 @@
 </head>
 <body>
 <div class="container-fluid">
-    <div class="bg-light" id="Header1"> Aufgabenplaner: Todos (Aktuelles Projekt) </div>
+    <!-- important -> überschreibt default von bg-light -->
+    <div class="bg-light" id="Header1" style="background-color: lightgray !important;"> Aufgabenplaner: Todos (Aktuelles Projekt) </div>
     <div class="row">
         <div class="col-2">
             <!-- sidebar -->
             <!-- card? -->
             <div class="list-group">
-                <div class="list-group-item"  id="blueFont1">
+                <div class="list-group-item"  style="color: dodgerblue">
                         Login
                 </div>
-                   <div class="list-group-item"  id="blueFont2">
+                   <div class="list-group-item" style="color: dodgerblue">
                         Projekte
                    </div>
-                <div class="list-group-item" id="blueFont3">
+                <div class="list-group-item" style="color: dodgerblue">
                         Aktuelles Projekt
                 </div>
                 <!-- beim fenster-verkleinern fällt text aus box -->
-                <div class="list-group-item" id="blueFont4">
+                <div class="list-group-item" id="blueFont1">
                         Reiter
                 </div>
-                <div class="list-group-item" id="blueFont5">
+                <div class="list-group-item" id="blueFont2">
                         Aufgaben
                 </div>
-                <div class="list-group-item" id="blueFont6">
+                <div class="list-group-item" id="blueFont3">
                         Mitglieder
                 </div>
             </div>
