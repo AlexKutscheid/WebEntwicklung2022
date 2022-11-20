@@ -15,19 +15,125 @@
             src="https://unpkg.com/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js">
     </script>
 
+    <!-- define properties of bg-light -->
+    <style>
+        #Header1 {
+            text-align: center;
+            font-size: 3em;
+            height: 3em;
+            margin-bottom: 25px;
+            padding-top: 30px;
+        }
+
+        #blueFont1 {
+            color: dodgerblue;
+        }
+        #blueFont2 {
+            color: dodgerblue;
+        }
+        #blueFont3 {
+            color: dodgerblue;
+        }
+        #blueFont4 {
+            color: dodgerblue;
+            margin-left: 40px;
+        }
+        #blueFont5 {
+            color: dodgerblue;
+            margin-left: 40px;
+        }
+        #blueFont6 {
+            color: dodgerblue;
+            margin-left: 40px;
+        }
+    </style>
+
 </head>
 <body>
+<div class="container-fluid">
+    <div class="bg-light" id="Header1"> Aufgabenplaner: Todos (Aktuelles Projekt) </div>
+    <div class="row">
+        <div class="col-2">
+            <!-- sidebar -->
+            <!-- card? -->
+            <div class="list-group">
+                <div class="list-group-item"  id="blueFont1">
+                        Login
+                </div>
+                   <div class="list-group-item"  id="blueFont2">
+                        Projekte
+                   </div>
+                <div class="list-group-item" id="blueFont3">
+                        Aktuelles Projekt
+                </div>
+                <!-- beim fenster-verkleinern fällt text aus box -->
+                <div class="list-group-item" id="blueFont4">
+                        Reiter
+                </div>
+                <div class="list-group-item" id="blueFont5">
+                        Aufgaben
+                </div>
+                <div class="list-group-item" id="blueFont6">
+                        Mitglieder
+                </div>
+            </div>
+        </div>
 
-<h1> Hallo Welt!! </h1>
-<p> Header Text </p>
-<button type="button" class="btn btn-primary">Primary</button>
-<button type="button" class="btn btn-secondary">Secondary</button>
-<button type="button" class="btn btn-success">Success</button>
-<button type="button" class="btn btn-danger">Danger</button>
-<button type="button" class="btn btn-warning">Warning</button>
-<button type="button" class="btn btn-info">Info</button>
-<button type="button" class="btn btn-light">Light</button>
-<button type="button" class="btn btn-dark">Dark</button>
+        <div class="col">
+            <!-- hauptkomponente -->
+            <div class="row">
+
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header">
+                            ToDo:
+                        </div>
+                        <div class="list-group">
+                            <div class="list-group-item">
+                                HTML Datei erstellen (Max Mustermann)
+                            </div>
+                            <div class="list-group-item">
+                                CSS Datei erstellen (Max Mustermann)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header">
+                            Erledigt:
+                        </div>
+                        <div class="list-group">
+                            <div class="list-group-item">
+                                PC eingeschaltet (Petra Müller)
+                            </div>
+                            <div class="list-group-item">
+                                Kaffee trinken (Petra Müller)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header">
+                            Verschoben:
+                        </div>
+                        <div class="list-group">
+                            <div class="list-group-item">
+                                Für die Uni lernen (Max Mustermann)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
 
 </body>
 </html>
