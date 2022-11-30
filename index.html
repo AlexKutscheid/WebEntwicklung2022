@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>WE-Test</title>
+    <title>Aufgabenplaner</title>
 
     <!--
     <link rel="stylesheet"href="css/bootstrap.css">
@@ -21,8 +21,8 @@
             text-align: center;
             font-size: 3em;
             height: 3em;
-            margin-bottom: 25px;
-            padding-top: 30px;
+            margin-bottom: 1em;
+            padding-top: 1em;
         }
 
         .blueFont {
@@ -36,31 +36,33 @@
 <body>
 <div class="container-fluid">
     <!-- important -> überschreibt default von bg-light -->
-    <div class="bg-light" id="Header1" style="background-color: lightgray !important;">Aufgabenplaner: Todos (Aktuelles Projekt) </div>
+    <div class="bg-light" id="Header1" style="background-color: lightgray !important;">
+        <h1>Aufgabenplaner: Todos (Aktuelles Projekt)</h1>
+    </div>
     <div class="row">
         <div class="col-2">
             <!-- sidebar -->
             <!-- card? -->
             <div class="list-group">
-                <div class="list-group-item"  style="color: dodgerblue">
+                <li class="list-group-item"  style="color: dodgerblue">
                     Login
-                </div>
-                <div class="list-group-item" style="color: dodgerblue">
+                </li>
+                <li class="list-group-item" style="color: dodgerblue">
                     Projekte
-                </div>
-                <div class="list-group-item" style="color: dodgerblue">
+                </li>
+                <li class="list-group-item" style="color: dodgerblue">
                     Aktuelles Projekt
-                </div>
+                </li>
                 <!-- beim fenster-verkleinern fällt text aus box -->
-                <div class="blueFont list-group-item">
+                <li class="blueFont list-group-item">
                     Reiter
-                </div>
-                <div class="blueFont list-group-item">
+                </li>
+                <li class="blueFont list-group-item">
                     Aufgaben
-                </div>
-                <div class="blueFont list-group-item">
+                </li>
+                <li class="blueFont list-group-item">
                     Mitglieder
-                </div>
+                </li>
             </div>
         </div>
 
@@ -74,12 +76,12 @@
                             ToDo:
                         </div>
                         <div class="list-group">
-                            <div class="list-group-item">
+                            <li class="list-group-item">
                                 HTML Datei erstellen (Max Mustermann)
-                            </div>
-                            <div class="list-group-item">
+                            </li>
+                            <li class="list-group-item">
                                 CSS Datei erstellen (Max Mustermann)
-                            </div>
+                            </li>
                         </div>
                     </div>
                 </div>
@@ -90,12 +92,12 @@
                             Erledigt:
                         </div>
                         <div class="list-group">
-                            <div class="list-group-item">
+                            <li class="list-group-item">
                                 PC eingeschaltet (Petra Müller)
-                            </div>
-                            <div class="list-group-item">
+                            </li>
+                            <li class="list-group-item">
                                 Kaffee trinken (Petra Müller)
-                            </div>
+                            </li>
                         </div>
                     </div>
                 </div>
@@ -106,9 +108,9 @@
                             Verschoben:
                         </div>
                         <div class="list-group">
-                            <div class="list-group-item">
-                                Für die Uni (Max Mustermann)
-                            </div>
+                            <li class="list-group-item">
+                                Für die Uni lernen (Max Mustermann)
+                            </li>
                         </div>
                     </div>
                 </div>
