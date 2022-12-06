@@ -85,7 +85,7 @@
         </div>
 
         <div class="row">
-            <p> Da der tatsächliche Vorgang technisch noch nicht realisiert wurde: <a style="text-decoration: none; color: dodgerblue" href="index.html"> Überspringen </a> </p>
+            <p> Da der tatsächliche Vorgang technisch noch nicht realisiert wurde: <a style="text-decoration: none; color: dodgerblue" href="index.php"> Überspringen </a> </p>
         </div>
 
 
