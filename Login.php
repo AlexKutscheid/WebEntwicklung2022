@@ -22,8 +22,9 @@
             text-align: center;
             font-size: 3em;
             height: 3em;
-            margin-bottom: 1em;
+            margin-bottom: 0.7em;
             padding-top: 1em;
+            margin-top: 0.25em;
         }
 
         .padLeft {

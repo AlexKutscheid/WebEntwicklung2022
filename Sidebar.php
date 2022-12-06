@@ -20,7 +20,7 @@
         <a style="text-decoration: none" href="Reiter.php"> Reiter </a>
     </li>
     <li class="blueFont list-group-item">
-        Aufgaben
+        <a style="text-decoration: none" href="Aufgaben.php"> Aufgaben </a>
     </li>
     <li class="blueFont list-group-item">
         Mitglieder

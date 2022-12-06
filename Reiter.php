@@ -1,19 +1,16 @@
 <?php
 $reiter = array(
     array(
-        'id' => '0',
-        'name' => 'ToDo',
-        'beschreibung' => 'Dinge, die erledigt werden müssen'
+        'Name' => 'ToDo',
+        'Beschreibung' => 'Dinge, die erledigt werden müssen'
     ),
     array(
-        'id' => '1',
-        'name' => 'Erledigt',
-        'beschreibung' => 'Dinge, die erledigt sind'
+        'Name' => 'Erledigt',
+        'Beschreibung' => 'Dinge, die erledigt sind'
     ),
     array(
-        'id' => '2',
-        'name' => 'Verschoben',
-        'beschreibung' => 'Dinge, die später erledigt werden'
+        'Name' => 'Verschoben',
+        'Beschreibung' => 'Dinge, die später erledigt werden'
     )
 );
 ?>
@@ -41,8 +38,9 @@ $reiter = array(
             text-align: center;
             font-size: 3em;
             height: 3em;
-            margin-bottom: 1em;
+            margin-bottom: 0.7em;
             padding-top: 1em;
+            margin-top: 0.25em;
         }
     </style>
 
@@ -78,8 +76,9 @@ $reiter = array(
                         <!-- 'tr' = table row -->
                             <tr>
                                 <!-- td = table data -->
-                                <td><?= isset($item['name']) ? $item['name'] : '' ?></td>
-                                <td><?= isset($item['beschreibung']) ? $item['beschreibung'] : '' ?></td>
+                                <td style="padding-top: 1em; padding-bottom: 1em"><?= isset($item['Name']) ? $item['Name'] : '' ?></td>
+                                <td><?= isset($item['Beschreibung']) ? $item['Beschreibung'] : '' ?></td>
+                                <!-- TODO icons -->
                             </tr>
                         <?php endforeach; endif; ?>
                         </tbody>
