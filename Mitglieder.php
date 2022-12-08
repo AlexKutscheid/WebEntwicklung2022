@@ -1,17 +1,17 @@
 <?php
 
 $Mitglieder = array(
-        array(
-                "Name" => "Max Mustermann",
-                "E-Mail" => "mustermann@muster.de" ,
-                "In Projekt" => ""
-        ),
+    array(
+        "Name" => "Max Mustermann",
+        "E-Mail" => "mustermann@muster.de" ,
+        "In Projekt" => ""
+    ),
 
-        array(
-            "Name" => "Petra Müller",
-            "E-Mail" => "petra@mueller.de" ,
-            "In Projekt" => ""
-        )
+    array(
+        "Name" => "Petra Müller",
+        "E-Mail" => "petra@mueller.de" ,
+        "In Projekt" => ""
+    )
 
 )
 
