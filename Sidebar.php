@@ -13,7 +13,7 @@
         <a style="text-decoration: none" href="Projekte.php"> Projekte </a>
     </li>
     <li class="list-group-item" style="color: dodgerblue">
-        Aktuelles Projekt
+        <a style="text-decoration: none" href="Aktuelles%20Projekt.php"> Aktuelles Projekt</a>
     </li>
     <!-- beim fenster-verkleinern fällt text aus box -->
     <li class="blueFont list-group-item">
@@ -23,6 +23,6 @@
         <a style="text-decoration: none" href="Aufgaben.php"> Aufgaben </a>
     </li>
     <li class="blueFont list-group-item">
-        Mitglieder
+        <a style="text-decoration: none" href="Mitglieder.php"> Mitlgieder </a>
     </li>
 </div>
