@@ -20,40 +20,42 @@ if($conn->connect_error){
 }
 else{
 
-    $sql = "SELECT * FROM Aufgaben, AufgabenMitgliederVK WHERE Aufgaben.ID = 1 and Aufgaben.ID = AufgabenMitgliederVK.AufgabenID";
+    echo('Aufgaben und wer sie erstellt hat: ' . '<br>');
+
+    $sql = "SELECT aufgaben.Name,aufgaben.Beschreibung, mitglieder.Username,mitglieder.EMail FROM aufgaben Inner Join mitglieder On aufgaben.ErstellerID = mitglieder.ID";
     $result = $conn->query($sql);
     echo('<ol>');
     if($result->num_rows > 0){
         while($row = $result->fetch_object()){
-            echo('<li>' . 'ID: ' . $row->ID. ': ' . $row->Name . '->' .$row->Beschreibung . '->' . $row->Erstellungsdatum);
+            echo('<li>' . 'Name: ' . $row->Name. ': ' . $row->Beschreibung . '->' .$row->Username . '->' . $row->EMail);
         }
     }
 
     echo('<br>');
     echo('<br>');
+    echo('Reiter mit jeweiligen Aufgaben: ' . '<br>');
+    echo('<br>');
 
-
-
-
-    // ID`, `Username`, `EMail`, `Password`
-    $sql2 = "SELECT * FROM Mitglieder";
+    $sql2 = "SELECT reiter.Name, aufgaben.Name As Name1,aufgaben.Beschreibung FROM reiter Inner Join aufgaben On aufgaben.ReiterID = reiter.ID";
     $result2 = $conn->query($sql2);
     echo('<ol>');
     if($result2->num_rows > 0){
         while($row = $result2->fetch_object()){
-            echo('<li>' . 'ID: ' . $row->ID. ': ' . $row->Username . '->' .$row->EMail . '->' . $row->Password);
+            echo('<li>' . 'Reiter: ' . $row->Name . ': ' . $row->Name1 . '->' .$row->Beschreibung);
         }
     }
 
     echo('<br>');
     echo('<br>');
+    echo('Projekte und wer sie erstellt hat: ' . '<br>');
+    echo('<br>');
 
-    $sql3 = "SELECT Aufgaben.ID, Aufgaben.Name FROM Aufgaben INNER JOIN ";
+    $sql3 = "SELECT projekte.Name,projekte.Beschreibung,mitglieder.Username FROM projekte Inner Join mitglieder On projekte.ErstellerID = mitglieder.ID";
     $result3 = $conn->query($sql3);
     echo('<ol>');
     if($result3->num_rows > 0){
         while($row = $result3->fetch_object()){
-            echo('<li>' . 'ID: ' . $row->ID. ': ' . $row->Name);
+            echo('<li>' . 'Name: ' . $row->Name. ': ' . $row->Beschreibung . ': ' . $row->Username);
         }
     }
 
