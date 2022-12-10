@@ -82,7 +82,7 @@
 
         <!-- span = inline container, um nur ein wort zu färben -->
         <div class="row">
-            <p> Noch nicht registriert? <span style="color: dodgerblue">Registrierung</span> </p>
+            <p> Noch nicht registriert? <a style="text-decoration: none; color: dodgerblue" href="database.php"> Registrieren (führt vorerst zur Datenbank) </a> </p>
         </div>
 
         <div class="row">
