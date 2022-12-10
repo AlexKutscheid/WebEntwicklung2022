@@ -6,12 +6,19 @@ $username = "root";
 $password = "";
 $dbname = "WebEntwicklungProjekt";
 
+
+
 /**
+
 $servername = "sql305.byetcluster.com";
 $username = "epiz_33047546";
 $password = "yuXFWR7YFwUrg";
 $dbname = "epiz_33047546_WEDatabse";
+ *
  * **/
+
+
+
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -22,7 +29,7 @@ else{
 
     echo('Aufgaben und wer sie erstellt hat: ' . '<br>');
 
-    $sql = "SELECT aufgaben.Name,aufgaben.Beschreibung, mitglieder.Username,mitglieder.EMail FROM aufgaben Inner Join mitglieder On aufgaben.ErstellerID = mitglieder.ID";
+    $sql = "SELECT Aufgaben.Name,Aufgaben.Beschreibung, Mitglieder.Username,Mitglieder.EMail FROM Aufgaben INNER JOIN Mitglieder ON Aufgaben.ErstellerID = Mitglieder.ID";
     $result = $conn->query($sql);
     echo('<ol>');
     if($result->num_rows > 0){
@@ -30,13 +37,12 @@ else{
             echo('<li>' . 'Name: ' . $row->Name. ': ' . $row->Beschreibung . '->' .$row->Username . '->' . $row->EMail);
         }
     }
+    echo('<br>');
+    echo('<br>');
+    echo('Reiter mit den jeweiligen Aufgaben: ' . '<br>');
+    echo('<br>');
 
-    echo('<br>');
-    echo('<br>');
-    echo('Reiter mit jeweiligen Aufgaben: ' . '<br>');
-    echo('<br>');
-
-    $sql2 = "SELECT reiter.Name, aufgaben.Name As Name1,aufgaben.Beschreibung FROM reiter Inner Join aufgaben On aufgaben.ReiterID = reiter.ID";
+    $sql2 = "SELECT Reiter.Name, Aufgaben.Name As Name1,Aufgaben.Beschreibung FROM Reiter Inner Join Aufgaben On Aufgaben.ReiterID = Reiter.ID";
     $result2 = $conn->query($sql2);
     echo('<ol>');
     if($result2->num_rows > 0){
@@ -50,7 +56,7 @@ else{
     echo('Projekte und wer sie erstellt hat: ' . '<br>');
     echo('<br>');
 
-    $sql3 = "SELECT projekte.Name,projekte.Beschreibung,mitglieder.Username FROM projekte Inner Join mitglieder On projekte.ErstellerID = mitglieder.ID";
+    $sql3 = "SELECT Projekte.Name,Projekte.Beschreibung,Mitglieder.Username FROM Projekte Inner Join Mitglieder On Projekte.ErstellerID = Mitglieder.ID";
     $result3 = $conn->query($sql3);
     echo('<ol>');
     if($result3->num_rows > 0){
