@@ -27,8 +27,9 @@ $reiter = array(
     <script src="js/bootstrap.js"></script>
     -->
 
-    <link href="https://unpkg.com/bootstrap@5.2.2/dist/css/bootstrap.min.css"
-          rel="stylesheet" />
+
+    <link href="https://unpkg.com/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@fortawesome/fontawesome-free@6.2.1/css/all.min.css">
     <script
             src="https://unpkg.com/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js">
     </script>
@@ -78,6 +79,14 @@ $reiter = array(
                                 <!-- td = table data -->
                                 <td style="padding-top: 1em; padding-bottom: 1em"><?= isset($item['Name']) ? $item['Name'] : '' ?></td>
                                 <td><?= isset($item['Beschreibung']) ? $item['Beschreibung'] : '' ?></td>
+                                <td class="text-right">
+                                    <button type="submit" class="btn btn-link"
+                                            value="<?= isset($item['id']) ? $item['id'] : '' ?>"><i
+                                                class="far fa-edit"></i></button>
+                                    <button type="submit" class="btn btn-link"
+                                            value="<?= isset($item['id']) ? $item['id'] : '' ?>"><i
+                                                class="far fa-trash-alt"></i></button>
+                                </td>
                                 <!-- TODO icons -->
                             </tr>
                         <?php endforeach; endif; ?>
