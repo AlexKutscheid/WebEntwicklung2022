@@ -8,17 +8,6 @@ $dbname = "WebEntwicklungProjekt";
 
 
 
-/**
-
-$servername = "sql305.byetcluster.com";
-$username = "epiz_33047546";
-$password = "yuXFWR7YFwUrg";
-$dbname = "epiz_33047546_WEDatabse";
- *
- * **/
-
-
-
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
