@@ -17,3 +17,17 @@
     </head>
 
 <body>
+
+<!-- Oberster Div Container mit Überschrift -->
+<div class="container-fluid">
+    <div class="text-center bg-light mt-3 mb-3 p-5">
+        <h1>Aufgabenplaner: <?= $title; ?> </h1>
+    </div>
+    <!-- Row Container mit Menü ganz links -->
+    <div class="row">
+        <!-- Col mit Menü -->
+        <div class="col-3">
+            <!-- Ausgelagertes Menü -->
+            <?php if ($title != "Login"){
+                include('Sidebar.php');} ?>
+        </div>

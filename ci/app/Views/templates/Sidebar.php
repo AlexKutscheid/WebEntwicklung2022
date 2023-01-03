@@ -7,7 +7,7 @@
 
 <div class="list-group">
     <li class="list-group-item"  style="color: dodgerblue">
-        <a style="text-decoration: none" href="Login.php"> Login </a>
+        <a style="text-decoration: none" href="../Login/Login.php"> Login </a>
     </li>
     <li class="list-group-item" style="color: dodgerblue">
         <a style="text-decoration: none" href="Projekte.php"> Projekte </a>

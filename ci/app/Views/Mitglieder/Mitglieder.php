@@ -1,24 +1,3 @@
-<?php
-
-$Mitglieder = array(
-    array(
-        "Name" => "Max Mustermann",
-        "E-Mail" => "mustermann@muster.de" ,
-        "In Projekt" => ""
-    ),
-
-    array(
-        "Name" => "Petra Müller",
-        "E-Mail" => "petra@mueller.de" ,
-        "In Projekt" => ""
-    )
-
-)
-
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
@@ -58,17 +37,6 @@ $Mitglieder = array(
 
 <body>
 
-<div class="container-fluid">
-    <!-- important -> überschreibt default von bg-light -->
-    <div class="bg-light" id="Header1" style="background-color: lightgray !important;">
-        <h1>Aufgabenplaner: Mitglieder</h1>
-    </div>
-
-    <div class="row">
-        <div class="col-2">
-            <?php include('Sidebar.php'); ?>
-        </div>
-
         <div class="col">
 
             <div class="row">
@@ -86,7 +54,7 @@ $Mitglieder = array(
                         </thead>
 
                         <tbody>
-                        <?php if (isset($Mitglieder)): foreach ($Mitglieder as $entry): ?>
+                        <?php if (isset($data)): foreach ($data as $entry): ?>
 
                             <tr>
                                 <td style="padding-bottom: 1em; padding-top: 1em"><?= isset($entry['Name']) ? $entry['Name'] : '' ?></td>

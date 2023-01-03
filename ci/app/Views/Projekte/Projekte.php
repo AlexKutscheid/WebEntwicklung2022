@@ -41,17 +41,6 @@
 
 <body>
 
-<div class="container-fluid">
-    <!-- important -> überschreibt default von bg-light -->
-    <div class="bg-light" id="Header1" style="background-color: lightgray !important;">
-        <h1>Aufgabenplaner: Projekte</h1>
-    </div>
-
-
-    <div class="row">
-        <div class="col-2">
-            <?php include('Sidebar.php'); ?>
-        </div>
 
         <div class="col-7">
             <!-- hauptkomponente -->
