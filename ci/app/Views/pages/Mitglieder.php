@@ -53,11 +53,11 @@
                         </thead>
 
                         <tbody>
-                        <?php if (isset($data)): foreach ($data as $entry): ?>
+                        <?php if (isset($mitglieder)): foreach ($mitglieder as $entry): ?>
 
                             <tr>
-                                <td style="padding-bottom: 1em; padding-top: 1em"><?= isset($entry['Name']) ? $entry['Name'] : '' ?></td>
-                                <td><?= isset($entry['E-Mail']) ? $entry['E-Mail'] : '' ?></td>
+                                <td style="padding-bottom: 1em; padding-top: 1em"><?= isset($entry['Username']) ? $entry['Username'] : '' ?></td>
+                                <td><?= isset($entry['EMail']) ? $entry['EMail'] : '' ?></td>
                                 <td><?= isset($entry['In Projekt']) ? $entry['In Projekt'] : '' ?></td>
 
                             </tr>

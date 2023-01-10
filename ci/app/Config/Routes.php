@@ -43,7 +43,7 @@ $routes->get('/Projekte', 'ProjekteController::index');
 $routes->get('/Sidebar', 'SidebarController::index');
 $routes->get('/Reiter', 'ReiterController::index');
 $routes->get('/Database', 'DatabaseController::index');
-$routes->get('/AktuellesProjekt', 'AktuelleAufgaben::index');
+$routes->get('/AktuellesProjekt', 'AktuellesProjektController::index');
 
 /*
  * --------------------------------------------------------------------

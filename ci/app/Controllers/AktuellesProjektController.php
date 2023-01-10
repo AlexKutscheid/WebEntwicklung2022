@@ -2,11 +2,11 @@
 
 namespace App\Controllers;
 
-class AktuelleAufgaben extends BaseController
+class AktuellesProjektController extends BaseController
 {
     public function index()
     {
-        $data['title'] = "Aktuelle Aufgaben";
+        $data['title'] = "Aktuelles Projekt";
         echo view ('templates/header',$data);
         echo view ('pages/AktuellesProjekt');
         echo view ('templates/footer');

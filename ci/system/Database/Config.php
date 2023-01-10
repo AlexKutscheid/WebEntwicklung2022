@@ -58,7 +58,7 @@ class Config extends BaseConfig
             $group  = 'custom-' . md5(json_encode($config));
         } else {
             /** @var DbConfig $dbConfig */
-            $dbConfig = config('DatabaseController');
+            $dbConfig = config('Database');
 
             if ($group === null) {
                 $group = (ENVIRONMENT === 'testing') ? 'tests' : $dbConfig->defaultGroup;
@@ -110,7 +110,7 @@ class Config extends BaseConfig
     }
 
     /**
-     * Returns a new instance of the DatabaseController Utilities class.
+     * Returns a new instance of the Database Utilities class.
      *
      * @param array|string|null $group
      *
@@ -124,7 +124,7 @@ class Config extends BaseConfig
     }
 
     /**
-     * Returns a new instance of the DatabaseController Seeder.
+     * Returns a new instance of the Database Seeder.
      *
      * @phpstan-param null|non-empty-string $group
      *
@@ -132,7 +132,7 @@ class Config extends BaseConfig
      */
     public static function seeder(?string $group = null)
     {
-        $config = config('DatabaseController');
+        $config = config('Database');
 
         return new Seeder($config, static::connect($group));
     }
