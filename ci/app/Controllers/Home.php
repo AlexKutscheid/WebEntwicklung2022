@@ -10,6 +10,6 @@ class Home extends BaseController
         // echo view ('templates/header');
         // echo view ('pages/simple', $data);
         // echo view ('templates/footer');
-        return view('welcome_message');
+        //return view('welcome_message');
     }
 }

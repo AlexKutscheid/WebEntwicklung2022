@@ -4,7 +4,7 @@
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8"
 
-        <title>WE-CodeIgniter</title>
+
 
         <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.2/font/bootstrap-icons.min.css" rel="stylesheet">
