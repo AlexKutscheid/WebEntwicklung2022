@@ -23,7 +23,7 @@ use stdClass;
 class Connection extends BaseConnection
 {
     /**
-     * Database driver
+     * DatabaseController driver
      *
      * @var string
      */
@@ -297,7 +297,7 @@ class Connection extends BaseConnection
 				AND UPPER(TABLE_NAME) = ' . $this->escape(strtoupper($table));
 
         if (($query = $this->query($sql)) === false) {
-            throw new DatabaseException(lang('Database.failGetFieldData'));
+            throw new DatabaseException(lang('DatabaseController.failGetFieldData'));
         }
         $query = $query->getResultObject();
 
@@ -347,7 +347,7 @@ class Connection extends BaseConnection
             . ' ORDER BY UC.CONSTRAINT_TYPE, AIC.COLUMN_POSITION';
 
         if (($query = $this->query($sql)) === false) {
-            throw new DatabaseException(lang('Database.failGetIndexData'));
+            throw new DatabaseException(lang('DatabaseController.failGetIndexData'));
         }
         $query = $query->getResultObject();
 
@@ -403,7 +403,7 @@ class Connection extends BaseConnection
         $query = $this->query($sql);
 
         if ($query === false) {
-            throw new DatabaseException(lang('Database.failGetForeignKeyData'));
+            throw new DatabaseException(lang('DatabaseController.failGetForeignKeyData'));
         }
         $query = $query->getResultObject();
 
@@ -497,7 +497,7 @@ class Connection extends BaseConnection
     public function storedProcedure(string $procedureName, array $params)
     {
         if ($procedureName === '') {
-            throw new DatabaseException(lang('Database.invalidArgument', [$procedureName]));
+            throw new DatabaseException(lang('DatabaseController.invalidArgument', [$procedureName]));
         }
 
         // Build the query string

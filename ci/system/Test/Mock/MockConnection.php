@@ -21,7 +21,7 @@ class MockConnection extends BaseConnection
     protected $returnValues = [];
 
     /**
-     * Database schema for Postgre and SQLSRV
+     * DatabaseController schema for Postgre and SQLSRV
      *
      * @var string
      */
@@ -39,7 +39,7 @@ class MockConnection extends BaseConnection
 
     /**
      * Orchestrates a query against the database. Queries must use
-     * Database\Statement objects to store the query and build it.
+     * DatabaseController\Statement objects to store the query and build it.
      * This method works with the cache.
      *
      * Should automatically handle different connections for read/write

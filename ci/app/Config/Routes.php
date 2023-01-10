@@ -17,7 +17,7 @@ if (is_file(SYSTEMPATH . 'Config/Routes.php')) {
  * --------------------------------------------------------------------
  */
 $routes->setDefaultNamespace('App\Controllers');
-$routes->setDefaultController('Aufgaben');
+$routes->setDefaultController('AufgabenController');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
@@ -35,7 +35,15 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Aufgaben::index');
+$routes->get('/', 'AufgabenController::index');
+$routes->get('/Aufgaben', 'AufgabenController::index');
+$routes->get('/Login', 'LoginController::index');
+$routes->get('/Mitglieder', 'MitgliederController::index');
+$routes->get('/Projekte', 'ProjekteController::index');
+$routes->get('/Sidebar', 'SidebarController::index');
+$routes->get('/Reiter', 'ReiterController::index');
+$routes->get('/Database', 'DatabaseController::index');
+$routes->get('/AktuellesProjekt', 'AktuelleAufgaben::index');
 
 /*
  * --------------------------------------------------------------------

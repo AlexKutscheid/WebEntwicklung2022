@@ -20,7 +20,7 @@ use InvalidArgumentException;
  * Class BaseBuilder
  *
  * Provides the core Query Builder methods.
- * Database-specific Builders might need to override
+ * DatabaseController-specific Builders might need to override
  * certain methods to make them work.
  */
 class BaseBuilder
@@ -2529,7 +2529,7 @@ class BaseBuilder
 
     /**
      * Checks if the ignore option is supported by
-     * the Database Driver for the specific statement.
+     * the DatabaseController Driver for the specific statement.
      *
      * @return string
      */

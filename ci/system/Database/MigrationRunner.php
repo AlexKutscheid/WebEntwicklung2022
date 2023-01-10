@@ -142,7 +142,7 @@ class MigrationRunner
         $this->namespace = APP_NAMESPACE;
 
         // get default database group
-        $config      = config('Database');
+        $config      = config('DatabaseController');
         $this->group = $config->defaultGroup;
         unset($config);
 
@@ -431,7 +431,7 @@ class MigrationRunner
             $dir   = rtrim($this->path, DIRECTORY_SEPARATOR) . '/';
             $files = get_filenames($dir, true, false, false);
         } else {
-            $files = $locator->listNamespaceFiles($namespace, '/Database/Migrations/');
+            $files = $locator->listNamespaceFiles($namespace, '/DatabaseController/Migrations/');
         }
 
         foreach ($files as $file) {
@@ -836,7 +836,7 @@ class MigrationRunner
         }
 
         $instance = new $class();
-        $group    = $instance->getDBGroup() ?? config('Database')->defaultGroup;
+        $group    = $instance->getDBGroup() ?? config('DatabaseController')->defaultGroup;
 
         if (ENVIRONMENT !== 'testing' && $group === 'tests' && $this->groupFilter !== 'tests') {
             // @codeCoverageIgnoreStart

@@ -38,21 +38,21 @@ class Seeder
     protected $seedPath;
 
     /**
-     * An instance of the main Database configuration
+     * An instance of the main DatabaseController configuration
      *
      * @var Database
      */
     protected $config;
 
     /**
-     * Database Connection instance
+     * DatabaseController Connection instance
      *
      * @var BaseConnection
      */
     protected $db;
 
     /**
-     * Database Forge instance.
+     * DatabaseController Forge instance.
      *
      * @var Forge
      */
@@ -77,7 +77,7 @@ class Seeder
      */
     public function __construct(Database $config, ?BaseConnection $db = null)
     {
-        $this->seedPath = $config->filesPath ?? APPPATH . 'Database/';
+        $this->seedPath = $config->filesPath ?? APPPATH . 'DatabaseController/';
 
         if (empty($this->seedPath)) {
             throw new InvalidArgumentException('Invalid filesPath set in the Config\Database.');

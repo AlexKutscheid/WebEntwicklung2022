@@ -2,11 +2,11 @@
 
 namespace App\Controllers;
 
-class Mitglieder extends BaseController
+class MitgliederController extends BaseController
 {
     public function index()
     {
-        $data['title'] = "Mitglieder";
+        $data['title'] = "MitgliederController";
         $data['data'] = array(
             array(
                 "Name" => "Max Mustermann",
@@ -22,7 +22,7 @@ class Mitglieder extends BaseController
         );
 
         echo view ('templates/header',$data);
-        echo view ('Mitglieder/Mitglieder');
+        echo view ('pages/Mitglieder');
         echo view ('templates/footer');
     }
 }

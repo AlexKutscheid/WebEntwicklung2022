@@ -410,7 +410,7 @@ class Table
     /**
      * Set table data from a database result object
      *
-     * @param BaseResult $object Database result object
+     * @param BaseResult $object DatabaseController result object
      */
     protected function _setFromDBResult($object)
     {

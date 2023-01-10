@@ -75,7 +75,7 @@ class SeederGenerator extends BaseCommand
     public function run(array $params)
     {
         $this->component = 'Seeder';
-        $this->directory = 'Database\Seeds';
+        $this->directory = 'DatabaseController\Seeds';
         $this->template  = 'seeder.tpl.php';
 
         $this->classNameLang = 'CLI.generator.className.seeder';

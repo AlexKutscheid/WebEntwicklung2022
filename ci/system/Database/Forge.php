@@ -416,7 +416,7 @@ class Forge
         if ($errorNames !== []) {
             $errorNames[0] = implode(', ', $errorNames);
 
-            throw new DatabaseException(lang('Database.fieldNotExists', $errorNames));
+            throw new DatabaseException(lang('DatabaseController.fieldNotExists', $errorNames));
         }
 
         $this->foreignKeys[] = [

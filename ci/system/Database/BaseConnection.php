@@ -57,7 +57,7 @@ abstract class BaseConnection implements ConnectionInterface
     protected $DSN;
 
     /**
-     * Database port
+     * DatabaseController port
      *
      * @var int|string
      */
@@ -85,14 +85,14 @@ abstract class BaseConnection implements ConnectionInterface
     protected $password;
 
     /**
-     * Database name
+     * DatabaseController name
      *
      * @var string
      */
     protected $database;
 
     /**
-     * Database driver
+     * DatabaseController driver
      *
      * @var string
      */
@@ -541,7 +541,7 @@ abstract class BaseConnection implements ConnectionInterface
 
     /**
      * Orchestrates a query against the database. Queries must use
-     * Database\Statement objects to store the query and build it.
+     * DatabaseController\Statement objects to store the query and build it.
      * This method works with the cache.
      *
      * Should automatically handle different connections for read/write
@@ -613,7 +613,7 @@ abstract class BaseConnection implements ConnectionInterface
                     $this->transComplete();
 
                     if ($transDepth === $this->transDepth) {
-                        log_message('error', 'Database: Failure during an automated transaction commit/rollback!');
+                        log_message('error', 'DatabaseController: Failure during an automated transaction commit/rollback!');
                         break;
                     }
                 }

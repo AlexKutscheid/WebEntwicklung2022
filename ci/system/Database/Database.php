@@ -14,7 +14,7 @@ namespace CodeIgniter\Database;
 use InvalidArgumentException;
 
 /**
- * Database Connection Factory
+ * DatabaseController Connection Factory
  *
  * Creates and returns an instance of the appropriate DatabaseConnection
  */
@@ -130,7 +130,7 @@ class Database
         $class = $driver . '\\' . $class;
 
         if (strpos($driver, '\\') === false) {
-            $class = "CodeIgniter\\Database\\{$class}";
+            $class = "CodeIgniter\\DatabaseController\\{$class}";
         }
 
         return new $class($argument);

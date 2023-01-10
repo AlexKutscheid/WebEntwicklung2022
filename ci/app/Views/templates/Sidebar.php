@@ -7,22 +7,22 @@
 
 <div class="list-group">
     <li class="list-group-item"  style="color: dodgerblue">
-        <a style="text-decoration: none" href="../Login/Login.php"> Login </a>
+        <a style="text-decoration: none" href="Login/"> Login </a>
     </li>
     <li class="list-group-item" style="color: dodgerblue">
-        <a style="text-decoration: none" href="Projekte.php"> Projekte </a>
+        <a style="text-decoration: none" href="Projekte"> Projekte </a>
     </li>
     <li class="list-group-item" style="color: dodgerblue">
-        <a style="text-decoration: none" href="Aktuelles%20Projekt.php"> Aktuelles Projekt </a>
+        <a style="text-decoration: none" href="AktuellesProjekt"> Aktuelles Projekt </a>
     </li>
     <!-- beim fenster-verkleinern fällt text aus box -->
     <li class="blueFont list-group-item">
-        <a style="text-decoration: none" href="Reiter.php"> Reiter </a>
+        <a style="text-decoration: none" href="Reiter"> Reiter </a>
     </li>
     <li class="blueFont list-group-item">
-        <a style="text-decoration: none" href="Aufgaben.php"> Aufgaben </a>
+        <a style="text-decoration: none" href="Aufgaben"> Aufgaben </a>
     </li>
     <li class="blueFont list-group-item">
-        <a style="text-decoration: none" href="Mitglieder.php"> Mitglieder </a>
+        <a style="text-decoration: none" href="Mitglieder"> Mitglieder </a>
     </li>
 </div>

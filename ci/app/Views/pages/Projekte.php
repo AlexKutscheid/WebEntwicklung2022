@@ -3,7 +3,6 @@
 <head>
 
     <meta charset="UTF-8">
-    <title>Aufgabenplaner: Projekte</title>
 
     <!--
     <link rel="stylesheet"href="css/bootstrap.css">
@@ -17,15 +16,6 @@
     </script>
 
     <style>
-
-        #Header1 {
-            text-align: center;
-            font-size: 3em;
-            height: 3em;
-            margin-bottom: 0.7em;
-            padding-top: 1em;
-            margin-top: 0.25em;
-        }
 
         h1 {
             margin-bottom: 0.5em;

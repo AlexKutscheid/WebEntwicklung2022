@@ -61,7 +61,7 @@ abstract class BaseModel
     protected $insertID = 0;
 
     /**
-     * The Database connection group that
+     * The DatabaseController connection group that
      * should be instantiated.
      *
      * @var string
@@ -158,7 +158,7 @@ abstract class BaseModel
     protected $protectFields = true;
 
     /**
-     * Database Connection
+     * DatabaseController Connection
      *
      * @var BaseConnection
      */
@@ -441,7 +441,7 @@ abstract class BaseModel
     abstract protected function doReplace(?array $data = null, bool $returnSQL = false);
 
     /**
-     * Grabs the last error(s) that occurred from the Database connection.
+     * Grabs the last error(s) that occurred from the DatabaseController connection.
      * This method works only with dbCalls.
      *
      * @return array|null
@@ -1063,7 +1063,7 @@ abstract class BaseModel
     /**
      * Grabs the last error(s) that occurred. If data was validated,
      * it will first check for errors there, otherwise will try to
-     * grab the last error from the Database connection.
+     * grab the last error from the DatabaseController connection.
      *
      * The return array should be in the following format:
      *  ['source' => 'message']

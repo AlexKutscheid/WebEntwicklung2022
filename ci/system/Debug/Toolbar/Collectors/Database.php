@@ -15,7 +15,7 @@ use CodeIgniter\Database\Query;
 use CodeIgniter\I18n\Time;
 
 /**
- * Collector for the Database tab of the Debug Toolbar.
+ * Collector for the DatabaseController tab of the Debug Toolbar.
  */
 class Database extends BaseCollector
 {
@@ -45,7 +45,7 @@ class Database extends BaseCollector
      *
      * @var string
      */
-    protected $title = 'Database';
+    protected $title = 'DatabaseController';
 
     /**
      * Array of database connections.
@@ -74,7 +74,7 @@ class Database extends BaseCollector
      * The static method used during Events to collect
      * data.
      *
-     * @internal param $ array \CodeIgniter\Database\Query
+     * @internal param $ array \CodeIgniter\DatabaseController\Query
      */
     public static function collect(Query $query)
     {
@@ -115,8 +115,8 @@ class Database extends BaseCollector
         foreach ($this->connections as $alias => $connection) {
             // Connection Time
             $data[] = [
-                'name'      => 'Connecting to Database: "' . $alias . '"',
-                'component' => 'Database',
+                'name'      => 'Connecting to DatabaseController: "' . $alias . '"',
+                'component' => 'DatabaseController',
                 'start'     => $connection->getConnectStart(),
                 'duration'  => $connection->getConnectDuration(),
             ];
@@ -125,7 +125,7 @@ class Database extends BaseCollector
         foreach (static::$queries as $query) {
             $data[] = [
                 'name'      => 'Query',
-                'component' => 'Database',
+                'component' => 'DatabaseController',
                 'start'     => $query['query']->getStartTime(true),
                 'duration'  => $query['query']->getDuration(),
                 'query'     => $query['query']->debugToolbarDisplay(),

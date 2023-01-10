@@ -4,31 +4,31 @@ $Aufgabenplaner = array(
     array(
         "Aufgabenbezeichnung" => "HTML Datei erstellen",
         "Beschreibung der Aufgabe" => "HTML Datei erstellen",
-        "Reiter" => "ToDo",
+        "ReiterController" => "ToDo",
         "Zuständig" => "Fynn Jansen"
     ),
     array(
         "Aufgabenbezeichnung" => "CSS Datei erstellen",
         "Beschreibung der Aufgabe" => "CSS Datei erstellen",
-        "Reiter" => "ToDo",
+        "ReiterController" => "ToDo",
         "Zuständig" => "Alexander Kutscheid"
     ),
     array(
         "Aufgabenbezeichnung" => "PC eingeschaltet",
         "Beschreibung der Aufgabe" => "PC einschalten",
-        "Reiter" => "Erledigt",
+        "ReiterController" => "Erledigt",
         "Zuständig" => "Fynn Jansen"
     ),
     array(
         "Aufgabenbezeichnung" => "Kaffee trinken",
         "Beschreibung der Aufgabe" => "Kaffee trinken",
-        "Reiter" => "Erledigt",
+        "ReiterController" => "Erledigt",
         "Zuständig" => "Alexander Kutscheid"
     ),
     array(
         "Aufgabenbezeichnung" => "Für die Uni lernen",
         "Beschreibung der Aufgabe" => "Für die Uni lernen",
-        "Reiter" => "Verschoben",
+        "ReiterController" => "Verschoben",
         "Zuständig" => "Fynn Jansen"
     ),
 )
@@ -108,7 +108,7 @@ $Aufgabenplaner = array(
                         <tr>
                             <td style="padding-bottom: 1em; padding-top: 1em"><?= isset($entry['Aufgabenbezeichnung']) ? $entry['Aufgabenbezeichnung'] : '' ?></td>
                             <td><?= isset($entry['Beschreibung der Aufgabe']) ? $entry['Beschreibung der Aufgabe'] : '' ?></td>
-                            <td><?= isset($entry['Reiter']) ? $entry['Reiter'] : '' ?></td>
+                            <td><?= isset($entry['ReiterController']) ? $entry['ReiterController'] : '' ?></td>
                             <td><?= isset($entry['Zuständig']) ? $entry['Zuständig'] : '' ?></td>
 
                         </tr>

@@ -52,11 +52,11 @@ class preload
             'include' => __DIR__ . '/vendor/codeigniter4/framework/system',
             'exclude' => [
                 // Not needed if you don't use them.
-                '/system/Database/OCI8/',
-                '/system/Database/Postgre/',
-                '/system/Database/SQLSRV/',
+                '/system/DatabaseController/OCI8/',
+                '/system/DatabaseController/Postgre/',
+                '/system/DatabaseController/SQLSRV/',
                 // Not needed.
-                '/system/Database/Seeder.php',
+                '/system/DatabaseController/Seeder.php',
                 '/system/Test/',
                 '/system/Language/',
                 '/system/CLI/',

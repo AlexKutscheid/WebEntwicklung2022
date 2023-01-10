@@ -67,7 +67,7 @@ class MigrationGenerator extends BaseCommand
     protected $options = [
         '--session'   => 'Generates the migration file for database sessions.',
         '--table'     => 'Table name to use for database sessions. Default: "ci_sessions".',
-        '--dbgroup'   => 'Database group to use for database sessions. Default: "default".',
+        '--dbgroup'   => 'DatabaseController group to use for database sessions. Default: "default".',
         '--namespace' => 'Set root namespace. Default: "APP_NAMESPACE".',
         '--suffix'    => 'Append the component title to the class name (e.g. User => UserMigration).',
     ];
@@ -78,7 +78,7 @@ class MigrationGenerator extends BaseCommand
     public function run(array $params)
     {
         $this->component = 'Migration';
-        $this->directory = 'Database\Migrations';
+        $this->directory = 'DatabaseController\Migrations';
         $this->template  = 'migration.tpl.php';
 
         if (array_key_exists('session', $params) || CLI::getOption('session')) {
@@ -104,7 +104,7 @@ class MigrationGenerator extends BaseCommand
             $data['session']  = true;
             $data['table']    = is_string($table) ? $table : 'ci_sessions';
             $data['DBGroup']  = is_string($DBGroup) ? $DBGroup : 'default';
-            $data['DBDriver'] = config('Database')->{$data['DBGroup']}['DBDriver'];
+            $data['DBDriver'] = config('DatabaseController')->{$data['DBGroup']}['DBDriver'];
             $data['matchIP']  = config('App')->sessionMatchIP;
         }
 

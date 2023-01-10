@@ -2,13 +2,14 @@
 
 namespace App\Controllers;
 
-class Reiter extends BaseController
+class ProjekteController extends BaseController
 {
     public function index()
     {
-        $data['title'] = "Reiter";
+        $data['title'] = "ProjekteController";
         echo view ('templates/header',$data);
-        echo view ('Reiter/Reiter');
+        echo view ('pages/Projekte');
         echo view ('templates/footer');
+
     }
 }

@@ -19,7 +19,7 @@ use CodeIgniter\Database\Exceptions\DatabaseException;
 abstract class BaseUtils
 {
     /**
-     * Database object
+     * DatabaseController object
      *
      * @var object
      */
@@ -121,7 +121,7 @@ abstract class BaseUtils
     }
 
     /**
-     * Optimize Database
+     * Optimize DatabaseController
      *
      * @return mixed
      *
@@ -256,7 +256,7 @@ abstract class BaseUtils
     }
 
     /**
-     * Database Backup
+     * DatabaseController Backup
      *
      * @param array|string $params
      *

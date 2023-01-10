@@ -150,8 +150,8 @@ class BaseCollector
      * Timeline data should be formatted into arrays that look like:
      *
      *  [
-     *      'name'      => 'Database::Query',
-     *      'component' => 'Database',
+     *      'name'      => 'DatabaseController::Query',
+     *      'component' => 'DatabaseController',
      *      'start'     => 10       // milliseconds
      *      'duration'  => 15       // milliseconds
      *  ]

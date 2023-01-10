@@ -25,7 +25,7 @@ use Throwable;
 class Connection extends BaseConnection
 {
     /**
-     * Database driver
+     * DatabaseController driver
      *
      * @var string
      */
@@ -192,7 +192,7 @@ class Connection extends BaseConnection
                 }
 
                 if (! $this->mysqli->set_charset($this->charset)) {
-                    log_message('error', "Database: Unable to set the configured connection charset ('{$this->charset}').");
+                    log_message('error', "DatabaseController: Unable to set the configured connection charset ('{$this->charset}').");
 
                     $this->mysqli->close();
 
@@ -406,7 +406,7 @@ class Connection extends BaseConnection
         $table = $this->protectIdentifiers($table, true, null, false);
 
         if (($query = $this->query('SHOW COLUMNS FROM ' . $table)) === false) {
-            throw new DatabaseException(lang('Database.failGetFieldData'));
+            throw new DatabaseException(lang('DatabaseController.failGetFieldData'));
         }
         $query = $query->getResultObject();
 
@@ -439,7 +439,7 @@ class Connection extends BaseConnection
         $table = $this->protectIdentifiers($table, true, null, false);
 
         if (($query = $this->query('SHOW INDEX FROM ' . $table)) === false) {
-            throw new DatabaseException(lang('Database.failGetIndexData'));
+            throw new DatabaseException(lang('DatabaseController.failGetIndexData'));
         }
 
         if (! $indexes = $query->getResultArray()) {
@@ -501,7 +501,7 @@ class Connection extends BaseConnection
                         tc.TABLE_NAME = ' . $this->escape($table);
 
         if (($query = $this->query($sql)) === false) {
-            throw new DatabaseException(lang('Database.failGetForeignKeyData'));
+            throw new DatabaseException(lang('DatabaseController.failGetForeignKeyData'));
         }
         $query = $query->getResultObject();
 

@@ -61,7 +61,7 @@ class SessionMigrationGenerator extends BaseCommand
      */
     protected $options = [
         '-t' => 'Supply a table name.',
-        '-g' => 'Database group to use. Default: "default".',
+        '-g' => 'DatabaseController group to use. Default: "default".',
     ];
 
     /**
@@ -70,7 +70,7 @@ class SessionMigrationGenerator extends BaseCommand
     public function run(array $params)
     {
         $this->component = 'Migration';
-        $this->directory = 'Database\Migrations';
+        $this->directory = 'DatabaseController\Migrations';
         $this->template  = 'migration.tpl.php';
 
         $table = 'ci_sessions';

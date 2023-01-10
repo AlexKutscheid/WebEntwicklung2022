@@ -61,7 +61,7 @@ class Table
     protected $prefixedTableName;
 
     /**
-     * Database connection.
+     * DatabaseController connection.
      *
      * @var Connection
      */

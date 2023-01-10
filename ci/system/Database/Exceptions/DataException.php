@@ -25,7 +25,7 @@ class DataException extends RuntimeException implements ExceptionInterface
      */
     public static function forInvalidMethodTriggered(string $method)
     {
-        return new static(lang('Database.invalidEvent', [$method]));
+        return new static(lang('DatabaseController.invalidEvent', [$method]));
     }
 
     /**
@@ -36,7 +36,7 @@ class DataException extends RuntimeException implements ExceptionInterface
      */
     public static function forEmptyDataset(string $mode)
     {
-        return new static(lang('Database.emptyDataset', [$mode]));
+        return new static(lang('DatabaseController.emptyDataset', [$mode]));
     }
 
     /**
@@ -48,7 +48,7 @@ class DataException extends RuntimeException implements ExceptionInterface
      */
     public static function forEmptyPrimaryKey(string $mode)
     {
-        return new static(lang('Database.emptyPrimaryKey', [$mode]));
+        return new static(lang('DatabaseController.emptyPrimaryKey', [$mode]));
     }
 
     /**
@@ -60,26 +60,26 @@ class DataException extends RuntimeException implements ExceptionInterface
      */
     public static function forInvalidArgument(string $argument)
     {
-        return new static(lang('Database.invalidArgument', [$argument]));
+        return new static(lang('DatabaseController.invalidArgument', [$argument]));
     }
 
     public static function forInvalidAllowedFields(string $model)
     {
-        return new static(lang('Database.invalidAllowedFields', [$model]));
+        return new static(lang('DatabaseController.invalidAllowedFields', [$model]));
     }
 
     public static function forTableNotFound(string $table)
     {
-        return new static(lang('Database.tableNotFound', [$table]));
+        return new static(lang('DatabaseController.tableNotFound', [$table]));
     }
 
     public static function forEmptyInputGiven(string $argument)
     {
-        return new static(lang('Database.forEmptyInputGiven', [$argument]));
+        return new static(lang('DatabaseController.forEmptyInputGiven', [$argument]));
     }
 
     public static function forFindColumnHaveMultipleColumns()
     {
-        return new static(lang('Database.forFindColumnHaveMultipleColumns'));
+        return new static(lang('DatabaseController.forFindColumnHaveMultipleColumns'));
     }
 }

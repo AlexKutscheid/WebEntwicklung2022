@@ -22,14 +22,14 @@ use stdClass;
 class Connection extends BaseConnection
 {
     /**
-     * Database driver
+     * DatabaseController driver
      *
      * @var string
      */
     public $DBDriver = 'Postgre';
 
     /**
-     * Database schema
+     * DatabaseController schema
      *
      * @var string
      */
@@ -253,7 +253,7 @@ class Connection extends BaseConnection
                 . ' ORDER BY "ordinal_position"';
 
         if (($query = $this->query($sql)) === false) {
-            throw new DatabaseException(lang('Database.failGetFieldData'));
+            throw new DatabaseException(lang('DatabaseController.failGetFieldData'));
         }
         $query = $query->getResultObject();
 
@@ -287,7 +287,7 @@ class Connection extends BaseConnection
 			AND "schemaname" = ' . $this->escape('public');
 
         if (($query = $this->query($sql)) === false) {
-            throw new DatabaseException(lang('Database.failGetIndexData'));
+            throw new DatabaseException(lang('DatabaseController.failGetIndexData'));
         }
         $query = $query->getResultObject();
 
@@ -333,7 +333,7 @@ class Connection extends BaseConnection
             tc.table_name = ' . $this->escape($table);
 
         if (($query = $this->query($sql)) === false) {
-            throw new DatabaseException(lang('Database.failGetForeignKeyData'));
+            throw new DatabaseException(lang('DatabaseController.failGetForeignKeyData'));
         }
 
         $query  = $query->getResultObject();

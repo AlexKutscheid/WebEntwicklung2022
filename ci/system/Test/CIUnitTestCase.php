@@ -72,7 +72,7 @@ abstract class CIUnitTestCase extends TestCase
     private ?array $traits = null;
 
     // --------------------------------------------------------------------
-    // Database Properties
+    // DatabaseController Properties
     // --------------------------------------------------------------------
 
     /**
@@ -117,7 +117,7 @@ abstract class CIUnitTestCase extends TestCase
      *
      * @var string
      */
-    protected $basePath = SUPPORTPATH . 'Database';
+    protected $basePath = SUPPORTPATH . 'DatabaseController';
 
     /**
      * The namespace(s) to help us find the migration classes.

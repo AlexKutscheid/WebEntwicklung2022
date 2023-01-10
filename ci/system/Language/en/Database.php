@@ -9,7 +9,7 @@
  * the LICENSE file that was distributed with this source code.
  */
 
-// Database language settings
+// DatabaseController language settings
 return [
     'invalidEvent'                     => '{0} is not a valid Model Event callback.',
     'invalidArgument'                  => 'You must provide a valid {0}.',

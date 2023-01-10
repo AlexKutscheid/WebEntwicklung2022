@@ -25,7 +25,7 @@ use stdClass;
 class Connection extends BaseConnection
 {
     /**
-     * Database driver
+     * DatabaseController driver
      *
      * @var string
      */
@@ -239,7 +239,7 @@ class Connection extends BaseConnection
     protected function _fieldData(string $table): array
     {
         if (false === $query = $this->query('PRAGMA TABLE_INFO(' . $this->protectIdentifiers($table, true, null, false) . ')')) {
-            throw new DatabaseException(lang('Database.failGetFieldData'));
+            throw new DatabaseException(lang('DatabaseController.failGetFieldData'));
         }
 
         $query = $query->getResultObject();
@@ -277,7 +277,7 @@ class Connection extends BaseConnection
         // Don't use PRAGMA index_list, so we can preserve index order
         $sql = "SELECT name FROM sqlite_master WHERE type='index' AND tbl_name=" . $this->escape(strtolower($table));
         if (($query = $this->query($sql)) === false) {
-            throw new DatabaseException(lang('Database.failGetIndexData'));
+            throw new DatabaseException(lang('DatabaseController.failGetIndexData'));
         }
         $query = $query->getResultObject();
 
@@ -292,7 +292,7 @@ class Connection extends BaseConnection
             $obj->fields = [];
 
             if (false === $fields = $this->query('PRAGMA index_info(' . $this->escape(strtolower($row->name)) . ')')) {
-                throw new DatabaseException(lang('Database.failGetIndexData'));
+                throw new DatabaseException(lang('DatabaseController.failGetIndexData'));
             }
 
             $fields = $fields->getResultObject();

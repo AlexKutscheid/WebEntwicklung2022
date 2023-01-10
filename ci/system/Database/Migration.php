@@ -26,14 +26,14 @@ abstract class Migration
     protected $DBGroup;
 
     /**
-     * Database Connection instance
+     * DatabaseController Connection instance
      *
      * @var ConnectionInterface
      */
     protected $db;
 
     /**
-     * Database Forge instance.
+     * DatabaseController Forge instance.
      *
      * @var Forge
      */
@@ -46,7 +46,7 @@ abstract class Migration
      */
     public function __construct(?Forge $forge = null)
     {
-        $this->forge = $forge ?? Database::forge($this->DBGroup ?? config('Database')->defaultGroup);
+        $this->forge = $forge ?? Database::forge($this->DBGroup ?? config('DatabaseController')->defaultGroup);
 
         $this->db = $this->forge->getConnection();
     }

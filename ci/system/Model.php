@@ -464,7 +464,7 @@ class Model extends BaseModel
     }
 
     /**
-     * Grabs the last error(s) that occurred from the Database connection.
+     * Grabs the last error(s) that occurred from the DatabaseController connection.
      * The return array should be in the following format:
      *  ['source' => 'message']
      * This method works only with dbCalls.

@@ -86,7 +86,7 @@ class Toolbar extends BaseConfig
      * Max Queries
      * --------------------------------------------------------------------------
      *
-     * If the Database Collector is enabled, it will log every query that the
+     * If the DatabaseController Collector is enabled, it will log every query that the
      * the system generates so they can be displayed on the toolbar's timeline
      * and in the query log. This can lead to memory issues in some instances
      * with hundreds of queries.

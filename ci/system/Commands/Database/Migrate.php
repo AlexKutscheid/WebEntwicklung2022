@@ -27,7 +27,7 @@ class Migrate extends BaseCommand
      *
      * @var string
      */
-    protected $group = 'Database';
+    protected $group = 'DatabaseController';
 
     /**
      * The Command's name

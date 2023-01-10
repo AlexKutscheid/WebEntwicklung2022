@@ -29,7 +29,7 @@ return [
             'validation' => 'Validation class name',
         ],
         'commandType'      => 'Command type',
-        'databaseGroup'    => 'Database group',
+        'databaseGroup'    => 'DatabaseController group',
         'fileCreate'       => 'File created: {0}',
         'fileError'        => 'Error while creating file: {0}',
         'fileExist'        => 'File exists: {0}',

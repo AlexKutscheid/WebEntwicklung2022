@@ -27,7 +27,7 @@ class ShowTableInfo extends BaseCommand
      *
      * @var string
      */
-    protected $group = 'Database';
+    protected $group = 'DatabaseController';
 
     /**
      * The Command's name
@@ -107,7 +107,7 @@ class ShowTableInfo extends BaseCommand
         }
 
         if ($tables === []) {
-            CLI::error('Database has no tables!', 'light_gray', 'red');
+            CLI::error('DatabaseController has no tables!', 'light_gray', 'red');
             CLI::newLine();
 
             return;

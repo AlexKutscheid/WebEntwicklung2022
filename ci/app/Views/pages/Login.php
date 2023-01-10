@@ -3,7 +3,6 @@
 <head>
 
     <meta charset="UTF-8">
-    <title>Aufgabenplaner: Login</title>
 
     <!--
     <link rel="stylesheet"href="css/bootstrap.css">
@@ -82,7 +81,7 @@
 
         <!-- span = inline container, um nur ein wort zu färben -->
         <div class="row">
-            <p> Noch nicht registriert? <a style="text-decoration: none; color: dodgerblue" href="database.php"> Registrieren (führt vorerst zur Datenbank) </a> </p>
+            <p> Noch nicht registriert? <a style="text-decoration: none; color: dodgerblue" href="Database"> Registrieren (führt vorerst zur Datenbank) </a> </p>
         </div>
 
         <div class="row">

@@ -29,7 +29,7 @@ class CreateDatabase extends BaseCommand
      *
      * @var string
      */
-    protected $group = 'Database';
+    protected $group = 'DatabaseController';
 
     /**
      * The Command's name
@@ -78,14 +78,14 @@ class CreateDatabase extends BaseCommand
         $name = array_shift($params);
 
         if (empty($name)) {
-            $name = CLI::prompt('Database name', null, 'required'); // @codeCoverageIgnore
+            $name = CLI::prompt('DatabaseController name', null, 'required'); // @codeCoverageIgnore
         }
 
         try {
             /**
              * @var Database $config
              */
-            $config = config('Database');
+            $config = config('DatabaseController');
 
             // Set to an empty database to prevent connection errors.
             $group = ENVIRONMENT === 'testing' ? 'tests' : $config->defaultGroup;
@@ -113,7 +113,7 @@ class CreateDatabase extends BaseCommand
                     $dbName = strpos($name, DIRECTORY_SEPARATOR) === false ? WRITEPATH . $name : $name;
 
                     if (is_file($dbName)) {
-                        CLI::error("Database \"{$dbName}\" already exists.", 'light_gray', 'red');
+                        CLI::error("DatabaseController \"{$dbName}\" already exists.", 'light_gray', 'red');
                         CLI::newLine();
 
                         return;
@@ -128,7 +128,7 @@ class CreateDatabase extends BaseCommand
 
                 if (! is_file($db->getDatabase()) && $name !== ':memory:') {
                     // @codeCoverageIgnoreStart
-                    CLI::error('Database creation failed.', 'light_gray', 'red');
+                    CLI::error('DatabaseController creation failed.', 'light_gray', 'red');
                     CLI::newLine();
 
                     return;
@@ -136,14 +136,14 @@ class CreateDatabase extends BaseCommand
                 }
             } elseif (! Database::forge()->createDatabase($name)) {
                 // @codeCoverageIgnoreStart
-                CLI::error('Database creation failed.', 'light_gray', 'red');
+                CLI::error('DatabaseController creation failed.', 'light_gray', 'red');
                 CLI::newLine();
 
                 return;
                 // @codeCoverageIgnoreEnd
             }
 
-            CLI::write("Database \"{$name}\" successfully created.", 'green');
+            CLI::write("DatabaseController \"{$name}\" successfully created.", 'green');
             CLI::newLine();
         } catch (Throwable $e) {
             $this->showError($e);

@@ -66,7 +66,7 @@ class ModelGenerator extends BaseCommand
      */
     protected $options = [
         '--table'     => 'Supply a table name. Default: "the lowercased plural of the class name".',
-        '--dbgroup'   => 'Database group to use. Default: "default".',
+        '--dbgroup'   => 'DatabaseController group to use. Default: "default".',
         '--return'    => 'Return type, Options: [array, object, entity]. Default: "array".',
         '--namespace' => 'Set root namespace. Default: "APP_NAMESPACE".',
         '--suffix'    => 'Append the component title to the class name (e.g. User => UserModel).',

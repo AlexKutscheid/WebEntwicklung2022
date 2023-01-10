@@ -4,31 +4,31 @@ $Aufgabenplaner = array(
     array(
         "Aufgabenbezeichnung" => "HTML Datei erstellen",
         "Beschreibung der Aufgabe" => "HTML Datei erstellen",
-        "Reiter" => "ToDo",
+        "ReiterController" => "ToDo",
         "Zuständig" => "Fynn Jansen"
     ),
     array(
         "Aufgabenbezeichnung" => "CSS Datei erstellen",
         "Beschreibung der Aufgabe" => "CSS Datei erstellen",
-        "Reiter" => "ToDo",
+        "ReiterController" => "ToDo",
         "Zuständig" => "Alexander Kutscheid"
     ),
     array(
         "Aufgabenbezeichnung" => "PC eingeschaltet",
         "Beschreibung der Aufgabe" => "PC einschalten",
-        "Reiter" => "Erledigt",
+        "ReiterController" => "Erledigt",
         "Zuständig" => "Fynn Jansen"
     ),
     array(
         "Aufgabenbezeichnung" => "Kaffee trinken",
         "Beschreibung der Aufgabe" => "Kaffee trinken",
-        "Reiter" => "Erledigt",
+        "ReiterController" => "Erledigt",
         "Zuständig" => "Alexander Kutscheid"
     ),
     array(
         "Aufgabenbezeichnung" => "Für die Uni lernen",
         "Beschreibung der Aufgabe" => "Für die Uni lernen",
-        "Reiter" => "Verschoben",
+        "ReiterController" => "Verschoben",
         "Zuständig" => "Fynn Jansen"
     ),
 )
@@ -39,7 +39,6 @@ $Aufgabenplaner = array(
 <head>
 
     <meta charset="UTF-8">
-    <title>Aufgabenplaner: Aufgaben</title>
 
     <!--
     <link rel="stylesheet"href="css/bootstrap.css">
@@ -53,15 +52,6 @@ $Aufgabenplaner = array(
     </script>
 
     <style>
-
-        #Header1 {
-            text-align: center;
-            font-size: 3em;
-            height: 3em;
-            margin-bottom: 0.7em;
-            padding-top: 1em;
-            margin-top: 0.25em;
-        }
 
         h1 {
             margin-bottom: 0.5em;
@@ -97,7 +87,7 @@ $Aufgabenplaner = array(
                         <tr>
                             <td style="padding-bottom: 1em; padding-top: 1em"><?= isset($entry['Aufgabenbezeichnung']) ? $entry['Aufgabenbezeichnung'] : '' ?></td>
                             <td><?= isset($entry['Beschreibung der Aufgabe']) ? $entry['Beschreibung der Aufgabe'] : '' ?></td>
-                            <td><?= isset($entry['Reiter']) ? $entry['Reiter'] : '' ?></td>
+                            <td><?= isset($entry['ReiterController']) ? $entry['ReiterController'] : '' ?></td>
                             <td><?= isset($entry['Zuständig']) ? $entry['Zuständig'] : '' ?></td>
 
                         </tr>

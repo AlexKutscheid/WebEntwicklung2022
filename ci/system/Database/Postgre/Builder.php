@@ -41,7 +41,7 @@ class Builder extends BaseBuilder
 
     /**
      * Checks if the ignore option is supported by
-     * the Database Driver for the specific statement.
+     * the DatabaseController Driver for the specific statement.
      *
      * @return string
      */

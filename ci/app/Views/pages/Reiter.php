@@ -20,7 +20,6 @@ $reiter = array(
 <head>
 
     <meta charset="UTF-8">
-    <title>Aufgabenplaner: Reiter</title>
 
     <!--
     <link rel="stylesheet"href="css/bootstrap.css">

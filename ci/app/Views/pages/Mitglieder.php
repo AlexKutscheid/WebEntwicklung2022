@@ -3,7 +3,6 @@
 <head>
 
     <meta charset="UTF-8">
-    <title>Aufgabenplaner: Mitglieder</title>
 
     <!--
     <link rel="stylesheet"href="css/bootstrap.css">

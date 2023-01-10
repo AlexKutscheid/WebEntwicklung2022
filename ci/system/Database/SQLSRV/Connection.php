@@ -22,14 +22,14 @@ use stdClass;
 class Connection extends BaseConnection
 {
     /**
-     * Database driver
+     * DatabaseController driver
      *
      * @var string
      */
     public $DBDriver = 'SQLSRV';
 
     /**
-     * Database name
+     * DatabaseController name
      *
      * @var string
      */
@@ -55,7 +55,7 @@ class Connection extends BaseConnection
     public $escapeChar = '"';
 
     /**
-     * Database schema
+     * DatabaseController schema
      *
      * @var string
      */
@@ -107,7 +107,7 @@ class Connection extends BaseConnection
         $connection = [
             'UID'                  => empty($this->username) ? '' : $this->username,
             'PWD'                  => empty($this->password) ? '' : $this->password,
-            'Database'             => $this->database,
+            'DatabaseController'             => $this->database,
             'ConnectionPooling'    => $persistent ? 1 : 0,
             'CharacterSet'         => $charset,
             'Encrypt'              => $this->encrypt === true ? 1 : 0,
@@ -228,7 +228,7 @@ class Connection extends BaseConnection
         $sql = 'EXEC sp_helpindex ' . $this->escape($this->schema . '.' . $table);
 
         if (($query = $this->query($sql)) === false) {
-            throw new DatabaseException(lang('Database.failGetIndexData'));
+            throw new DatabaseException(lang('DatabaseController.failGetIndexData'));
         }
         $query = $query->getResultObject();
 
@@ -281,7 +281,7 @@ class Connection extends BaseConnection
             . 'OBJECT_NAME (f.parent_object_id) = ' . $this->escape($table);
 
         if (($query = $this->query($sql)) === false) {
-            throw new DatabaseException(lang('Database.failGetForeignKeyData'));
+            throw new DatabaseException(lang('DatabaseController.failGetForeignKeyData'));
         }
 
         $query  = $query->getResultObject();
@@ -336,7 +336,7 @@ class Connection extends BaseConnection
 			WHERE TABLE_NAME= ' . $this->escape(($table));
 
         if (($query = $this->query($sql)) === false) {
-            throw new DatabaseException(lang('Database.failGetFieldData'));
+            throw new DatabaseException(lang('DatabaseController.failGetFieldData'));
         }
 
         $query  = $query->getResultObject();

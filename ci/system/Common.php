@@ -330,7 +330,7 @@ if (! function_exists('db_connect')) {
     /**
      * Grabs a database connection and returns it to the user.
      *
-     * This is a convenience wrapper for \Config\Database::connect()
+     * This is a convenience wrapper for \Config\DatabaseController::connect()
      * and supports the same parameters. Namely:
      *
      * When passing in $db, you may pass any of the following to connect:
