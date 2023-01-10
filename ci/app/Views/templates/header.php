@@ -28,6 +28,6 @@
         <!-- Col mit Menü -->
         <div class="col-3">
             <!-- Ausgelagertes Menü -->
-            <?php if ($title != "Login"){
+            <?php if ($title != "Login" && $title != "Registrieren"){
                 include('Sidebar.php');} ?>
         </div>

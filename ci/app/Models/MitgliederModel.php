@@ -15,4 +15,19 @@ class MitgliederModel extends Model {
         return $result -> getResultArray();
     }
 
+    public function sessionData(){
+        $this->mitglieder = $this->db->table('Mitglieder');
+        $this->mitglieder->select('Username');
+        $this->mitglieder->select('ID');
+        $this->mitglieder->select('EMail');
+        $this->mitglieder->where('Mitglieder.Username', $_POST['username']);
+        return $this->mitglieder->get()->getResultArray();
+    }
+    
+    public function insertNewUser(){
+        $this->mitglieder = $this->db->table('Mitglieder');
+        $password = $_POST['passwort'];
+        $hashedpw = password_hash($password, PASSWORD_DEFAULT, ['cost' => 10]);
+        $this->mitglieder->insert(array('Username' => $_POST['username'], 'Password' => $hashedpw, 'EMail' => $_POST['email']));
+    }
 }

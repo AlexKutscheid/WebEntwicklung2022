@@ -14,13 +14,14 @@ class LoginController extends BaseController
 
         //var_dump(password_hash("123", PASSWORD_BCRYPT));
 
-        if (isset($_POST['username']) && isset($_POST['passwort'])) {
+        if (!empty($_POST['username']) && !empty($_POST['passwort'])) {
             if($this->mitgliederModel->login() != NULL){
                 $passwort = $this->mitgliederModel->login()['Password'];
 
-
                 if(password_verify($_POST['passwort'], $passwort)){
                     $this->session->set('loggedin', True);
+                    $sessData = $this->mitgliederModel->sessionData();
+                    $_SESSION = $sessData;
                     return redirect()->to(base_url() . '/Mitglieder');
                 }
             }
