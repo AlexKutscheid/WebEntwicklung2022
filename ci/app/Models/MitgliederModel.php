@@ -33,7 +33,6 @@ class MitgliederModel extends Model {
 
     public function deleteUser ($id){
         $this->mitglieder = $this->db->table('Mitglieder');
-        // gets to this point
         $this->mitglieder->where('Mitglieder.Id', $id);
         return $this->mitglieder->delete();
     }
