@@ -14,4 +14,12 @@ class MitgliederController extends BaseController
         echo view ('pages/Mitglieder',$data);
         echo view ('templates/footer');
     }
+    public function delete(){
+        if(!empty($_GET['id'])){
+            $id = $_GET['id'];
+            $mitgliederModel = new MitgliederModel();
+            $mitgliederModel -> deleteUser($id);
+        }
+        return redirect()->to(base_url() . '/Mitglieder');
+    }
 }

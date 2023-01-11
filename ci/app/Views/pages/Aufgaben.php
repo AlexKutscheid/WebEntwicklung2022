@@ -1,39 +1,3 @@
-<?php
-
-$Aufgabenplaner = array(
-    array(
-        "Aufgabenbezeichnung" => "HTML Datei erstellen",
-        "Beschreibung der Aufgabe" => "HTML Datei erstellen",
-        "ReiterController" => "ToDo",
-        "Zuständig" => "Fynn Jansen"
-    ),
-    array(
-        "Aufgabenbezeichnung" => "CSS Datei erstellen",
-        "Beschreibung der Aufgabe" => "CSS Datei erstellen",
-        "ReiterController" => "ToDo",
-        "Zuständig" => "Alexander Kutscheid"
-    ),
-    array(
-        "Aufgabenbezeichnung" => "PC eingeschaltet",
-        "Beschreibung der Aufgabe" => "PC einschalten",
-        "ReiterController" => "Erledigt",
-        "Zuständig" => "Fynn Jansen"
-    ),
-    array(
-        "Aufgabenbezeichnung" => "Kaffee trinken",
-        "Beschreibung der Aufgabe" => "Kaffee trinken",
-        "ReiterController" => "Erledigt",
-        "Zuständig" => "Alexander Kutscheid"
-    ),
-    array(
-        "Aufgabenbezeichnung" => "Für die Uni lernen",
-        "Beschreibung der Aufgabe" => "Für die Uni lernen",
-        "ReiterController" => "Verschoben",
-        "Zuständig" => "Fynn Jansen"
-    ),
-)
-?>
-
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
@@ -62,8 +26,6 @@ $Aufgabenplaner = array(
 </head>
 
 <body>
-
-
         <div class="col">
 
             <div class="row">
@@ -82,13 +44,13 @@ $Aufgabenplaner = array(
                         </thead>
 
                         <tbody>
-                        <?php if (isset($Aufgabenplaner)): foreach ($Aufgabenplaner as $entry): ?>
+                        <?php if (isset($aufgaben)): foreach ($aufgaben as $entry): ?>
 
                         <tr>
-                            <td style="padding-bottom: 1em; padding-top: 1em"><?= isset($entry['Aufgabenbezeichnung']) ? $entry['Aufgabenbezeichnung'] : '' ?></td>
-                            <td><?= isset($entry['Beschreibung der Aufgabe']) ? $entry['Beschreibung der Aufgabe'] : '' ?></td>
-                            <td><?= isset($entry['ReiterController']) ? $entry['ReiterController'] : '' ?></td>
-                            <td><?= isset($entry['Zuständig']) ? $entry['Zuständig'] : '' ?></td>
+                            <td style="padding-bottom: 1em; padding-top: 1em"><?= isset($entry['Name']) ? $entry['Name'] : '' ?></td>
+                            <td><?= isset($entry['Beschreibung']) ? $entry['Beschreibung'] : '' ?></td>
+                            <td><?= isset($entry['ReiterID']) ? $entry['ReiterID'] : '' ?></td>
+                            <td><?= isset($entry['ErstellerID']) ? $entry['ErstellerID'] : '' ?></td>
 
                         </tr>
 

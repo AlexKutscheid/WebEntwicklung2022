@@ -3,9 +3,9 @@ namespace App\Models;
 use CodeIgniter\Model;
 class MitgliederModel extends Model {
 
-    public function login(){
+    public function getUser(){
         $this->mitglieder = $this->db->table('Mitglieder');
-        $this->mitglieder->select('Password');
+        $this->mitglieder->select('*');
         $this->mitglieder->where('Mitglieder.Username', $_POST['username']);
 
         return $this->mitglieder->get()->getRowArray();
@@ -23,11 +23,18 @@ class MitgliederModel extends Model {
         $this->mitglieder->where('Mitglieder.Username', $_POST['username']);
         return $this->mitglieder->get()->getResultArray();
     }
-    
+
     public function insertNewUser(){
         $this->mitglieder = $this->db->table('Mitglieder');
         $password = $_POST['passwort'];
         $hashedpw = password_hash($password, PASSWORD_DEFAULT, ['cost' => 10]);
         $this->mitglieder->insert(array('Username' => $_POST['username'], 'Password' => $hashedpw, 'EMail' => $_POST['email']));
+    }
+
+    public function deleteUser ($id){
+        $this->mitglieder = $this->db->table('Mitglieder');
+        // gets to this point
+        $this->mitglieder->where('Mitglieder.Id', $id);
+        return $this->mitglieder->delete();
     }
 }

@@ -1,15 +1,17 @@
 <?php
 
 namespace App\Controllers;
+use App\Models\AufgabenModel;
 
 class AufgabenController extends BaseController
 {
     public function index()
     {
         $data['title'] = "Aufgaben";
-        echo view ('templates/header',$data);
-        echo view ('pages/Aufgaben');
-        echo view ('templates/footer');
-
+        $aufgabenModel = new aufgabenModel();
+        $data['aufgaben'] = $aufgabenModel->getInfo();
+        echo view('templates/header', $data);
+        echo view('pages/Aufgaben', $data);
+        echo view('templates/footer');
     }
 }

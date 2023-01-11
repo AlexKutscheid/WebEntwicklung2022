@@ -1,25 +1,9 @@
-<?php
-$reiter = array(
-    array(
-        'Name' => 'ToDo',
-        'Beschreibung' => 'Dinge, die erledigt werden müssen'
-    ),
-    array(
-        'Name' => 'Erledigt',
-        'Beschreibung' => 'Dinge, die erledigt sind'
-    ),
-    array(
-        'Name' => 'Verschoben',
-        'Beschreibung' => 'Dinge, die später erledigt werden'
-    )
-);
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 
     <meta charset="UTF-8">
+    <title>Aufgabenplaner: Reiter</title>
 
     <!--
     <link rel="stylesheet"href="css/bootstrap.css">
@@ -51,7 +35,6 @@ $reiter = array(
         <div class="col">
             <div class="row">
                 <form class="form-group">
-
                     <table class="table table-hover">
                         <tr class="table-light">
                             <!-- th scope = col sorgt dafür das Überschrift der table ganze Spalte vereinnahmt, also sorgt für Abstand zw Beschreibung und Name -->
@@ -69,13 +52,12 @@ $reiter = array(
                                 <td><?= isset($item['Beschreibung']) ? $item['Beschreibung'] : '' ?></td>
                                 <td class="text-right">
                                     <button type="submit" class="btn btn-link"
-                                            value="<?= isset($item['id']) ? $item['id'] : '' ?>"><i
+                                            value="<?= isset($item['ID']) ? $item['ID'] : '' ?>"><i
                                                 class="far fa-edit"></i></button>
                                     <button type="submit" class="btn btn-link"
-                                            value="<?= isset($item['id']) ? $item['id'] : '' ?>"><i
+                                            value="<?= isset($item['ID']) ? $item['ID'] : '' ?>"><i
                                                 class="far fa-trash-alt"></i></button>
                                 </td>
-                                <!-- TODO icons -->
                             </tr>
                         <?php endforeach; endif; ?>
                         </tbody>
