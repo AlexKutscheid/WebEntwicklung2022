@@ -10,6 +10,14 @@ class MitgliederModel extends Model {
 
         return $this->mitglieder->get()->getRowArray();
     }
+
+    public function getUserByID($id){
+        $this->mitglieder = $this->db->table('Mitglieder');
+        $this->mitglieder->select('*');
+        $this->mitglieder->where('Mitglieder.ID', $id);
+
+        return $this->mitglieder->get()->getRowArray();
+    }
     public function getInfo() :array {
         $result = $this->db->query('SELECT * FROM Mitglieder');
         return $result -> getResultArray();
@@ -35,5 +43,25 @@ class MitgliederModel extends Model {
         $this->mitglieder = $this->db->table('Mitglieder');
         $this->mitglieder->where('Mitglieder.Id', $id);
         return $this->mitglieder->delete();
+    }
+
+    public function editUser($username, $email, $passwordNew, $id){
+        $this->mitglieder = $this->db->table('Mitglieder');
+        $this->mitglieder->where('Mitglieder.ID', $id);
+
+
+        if( $passwordNew!= null && $email != null){
+            $password = $passwordNew;
+            $hashed_pw = password_hash($password, PASSWORD_DEFAULT, ['cost' => 10]);
+            return $this->mitglieder->update(array('Username' => $username, 'EMail' => $email, 'Password' => $hashed_pw));
+        }
+        else if($passwordNew ==null){
+            return $this->mitglieder->update(array('Username' => $username, 'EMail' => $email));
+        }
+        else if($email==null){
+            $password = $passwordNew;
+            $hashed_pw = password_hash($password, PASSWORD_DEFAULT, ['cost' => 10]);
+            return $this->mitglieder->update(array('Username' => $username, 'Password' => $hashed_pw));
+        }
     }
 }

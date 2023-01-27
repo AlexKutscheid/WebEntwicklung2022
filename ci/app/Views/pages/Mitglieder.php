@@ -51,33 +51,13 @@
                                         <input type="checkbox" class="form-check-input" onclick="return false;" checked=checked >
                                 </td>
                                 <td class="text-right">
-                                    <a href="<?= base_url("./MitgliederController/delete?id=") . $entry['ID'] ?>" class="fa-regular fa-trash-can text-primary m-2"></a>
-                                    <a href="" class="fa-regular fa-pen-to-square text-primary m-2"></a>
+                                    <a href="<?= base_url("./MitgliederDel/?id=") . $entry['ID'] ?>" class="fa-regular fa-trash-can text-primary m-2"></a>
+                                    <a href="<?= base_url("./MitgliederEditController/?id=" .$entry['ID'])?>" class="fa-regular fa-pen-to-square text-primary m-2"></a>
                                 </td>
                             </tr>
                         <?php endforeach; endif; ?>
                         </tbody>
                     </table>
-
-                    <h5>Bearbeiten/Erstellen</h5>
-
-                    <div class="form-group">
-
-                        <label>Username: </label>
-                        <input type="text" class="form-control mt-1 mb-3" id="username"
-                               placeholder="Username">
-
-                        <label>E-Mail-Adresse: </label>
-                        <input type="email" class="form-control mt-1 mb-3" id="email"
-                               placeholder="E-Mail-Adresse eingeben">
-
-                        <label>Passwort: </label>
-                        <input type="text" class="form-control mt-1 mb-3" id="passwort"
-                               placeholder="Passwort">
-
-
-                        <button type="submit" class="btn btn-primary mt-3 mb-2">Speichern</button>
-                        <button type="submit" class="btn btn-info mt-3 mb-2" href="http://jankutsch.42web.io/ci/public/Mitglieder" >Reset</button>
 
 
                     </div>

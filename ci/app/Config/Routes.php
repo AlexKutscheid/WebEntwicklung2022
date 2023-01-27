@@ -25,7 +25,7 @@ $routes->set404Override();
 // where controller filters or CSRF protection are bypassed.
 // If you don't want to define all routes, please use the Auto Routing (Improved).
 // Set `$autoRoutesImproved` to true in `app/Config/Feature.php` and set the following to true.
-$routes->setAutoRoute(true);
+$routes->setAutoRoute(false);
 
 /*
  * --------------------------------------------------------------------
@@ -36,15 +36,20 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'LoginController::index');
+$routes->post('/LoginController', 'LoginController::index');
 $routes->get('/Aufgaben', 'AufgabenController::index');
 $routes->get('/Login', 'LoginController::index');
 $routes->get('/Mitglieder', 'MitgliederController::index');
+$routes->get('/MitgliederDel', 'MitgliederController::delete');
+$routes->get('/MitgliederEditController', 'MitgliederEditController::index');
+$routes->post('/MitgliederEdit', 'MitgliederController::edit');
 $routes->get('/Projekte', 'ProjekteController::index');
 $routes->get('/Sidebar', 'SidebarController::index');
 $routes->get('/Reiter', 'ReiterController::index');
 $routes->get('/Database', 'DatabaseController::index');
 $routes->get('/AktuellesProjekt', 'AktuellesProjektController::index');
 $routes->get('/Register', 'RegisterController::index');
+$routes->post('/RegisterPost', 'RegisterController::index');
 $routes->get('/Edit', 'EditController::index');
 
 /*

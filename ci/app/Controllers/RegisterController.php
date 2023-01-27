@@ -11,7 +11,6 @@ class RegisterController extends BaseController
     }
     public function index()
     {
-        helper(['form']);
 
         if (!empty($_POST['username']) && !empty($_POST['passwort']) && !empty($_POST['email'])) {
             $this->mitgliederModel->insertNewUser();

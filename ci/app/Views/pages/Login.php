@@ -8,7 +8,7 @@
     <div class="row">
         <div class="col-3"></div>
         <div class="col-6 card ps-0 pe-0">
-            <form method="post" action="<?= base_url() ?>/LoginController">
+            <?= form_open('LoginController', array('role' => 'form')) ?>
             <legend class="card-header"> Login </legend>
             <div class="card-body">
                 <div class="form-group pb-2">
@@ -21,10 +21,10 @@
                 </div>
                 <button id="btnsubmit" name="btnsubmit" type="submit" class="btn btn-primary"> Login </button>
                 <p>
-                    Noch nicht registriert ? <a href="RegisterController" > Registrierung </a>
+                    Noch nicht registriert ? <a href="<?php echo base_url(); ?>/Register" > Registrierung </a>
                 </p>
             </div>
-            </form>
+            <?= form_close() ?>
         </div>
         <div class="col-3"></div>
     </div>

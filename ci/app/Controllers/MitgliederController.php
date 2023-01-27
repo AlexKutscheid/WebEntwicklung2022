@@ -22,4 +22,16 @@ class MitgliederController extends BaseController
         }
         return redirect()->to(base_url() . '/Mitglieder');
     }
+
+    public function edit(){
+
+        $username = $_POST['inputName'];
+        $email = $_POST['inputMail'];
+        $password = $_POST['inputPassword'];
+        $id  = $_POST['InputID'];
+
+        $mitgliederModel = new MitgliederModel();
+        $mitgliederModel -> editUser($username, $email, $password, $id);
+        return redirect()->to(base_url() . '/Mitglieder');
+    }
 }

@@ -10,9 +10,6 @@ class LoginController extends BaseController
     }
     public function index()
     {
-        helper(['form']);
-
-        //var_dump(password_hash("123", PASSWORD_BCRYPT));
 
         if (!empty($_POST['username']) && !empty($_POST['passwort'])) {
             $user = $this->mitgliederModel->getUser();
@@ -23,8 +20,6 @@ class LoginController extends BaseController
                 if(password_verify($_POST['passwort'], $passwort)){
                     $this->session->set('loggedin', True);
                     $this->session->set("sessUserID", $userId);
-                    $sessData = $this->mitgliederModel->sessionData();
-                    $_SESSION = $sessData;
                     return redirect()->to(base_url() . '/Mitglieder');
                 }
             }
