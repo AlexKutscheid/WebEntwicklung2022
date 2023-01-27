@@ -52,6 +52,8 @@ $routes->get('/Register', 'RegisterController::index');
 $routes->post('/RegisterPost', 'RegisterController::index');
 $routes->get('/Edit', 'EditController::index');
 
+$routes->post('/ProjektePost', 'ProjekteController::index');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

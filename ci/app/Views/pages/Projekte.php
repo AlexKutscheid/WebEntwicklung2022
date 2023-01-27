@@ -39,10 +39,12 @@
 
                 <h1> Projekt auswählen: </h1>
                 <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+
                     <option selected>- bitte auswählen -</option>
-                    <option value="1">Eins</option>
-                    <option value="2">Zwei</option>
-                    <option value="3">Drei</option>
+                    <?php if (isset($projects)): foreach ($projects as $entry): ?>
+                        <option> <?= $entry['Name'] ?> </option>
+                    <?php endforeach; endif; ?>
+
                 </select>
 
             </div>
@@ -53,19 +55,22 @@
 
             <h1 id="bm"> Projekt bearbeiten/erstellen: </h1>
 
-            <div class="form-group mb-3">
+
+            <?= form_open('ProjektePost', array('role' => 'form')) ?>
+                <div class="form-group mb-3">
                 <label for="Projektname">Projektname:</label>
-                <input class="form-control" id="Projektname" placeholder="Projekt">
-            </div>
+                <input class="form-control" id="Projektname" name="Projektname" placeholder="Projekt">
+                </div>
 
-            <div class="form-group mb-3">
+                <div class="form-group mb-3">
                 <label for="Projektbeschreibung">Projektbeschreibung</label>
-                <textarea class="form-control" id="Projektbeschreibung" rows="3"
+                <textarea name="Projektbeschreibung" class="form-control" id="Projektbeschreibung" rows="3"
                           placeholder="Beschreibung"></textarea>
-            </div>
+                </div>
+                <button type="submit" class="btn btn-primary" name="submitProjects"> Erstellen </button>
+            <?= form_close() ?>
 
-            <button type="submit" class="btn btn-primary"> Speichern</button>
-            <button type="submit" class="btn btn-info"> Reset</button>
+
 
         </div>
     </div>
