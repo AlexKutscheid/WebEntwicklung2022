@@ -15,12 +15,17 @@
                     <label for="username"> Username </label>
                     <input type="text" class="form-control" id="username" name="username" \>
                 </div>
-                <div class="form-group pb-2">
+                <div style="margin-bottom: 20px" class="form-group pb-2">
                     <label for="passwort"> Password: </label>
                     <input type="password" class="form-control" id="passwort" name="passwort" \>
                 </div>
-                <button id="btnsubmit" name="btnsubmit" type="submit" class="btn btn-primary"> Login </button>
-                <p>
+                <div sytle="margin-left:10px"  class="form-group form-check my-1">
+                    <input id="agbCheck" name="agbaccept" type="checkbox" class="form-check-input
+                    ">
+                    <label for="agbCheck" class="form-check-label">AGBs und Datenschutzbedingungen akzeptieren</label>
+                </div>
+                <button id="btnsubmit" name="btnsubmit" type="submit" class="btn btn-primary" style="margin-top: 20px"> Login </button>
+                <p style="margin-top: 20px">
                     Noch nicht registriert ? <a href="<?php echo base_url(); ?>/Register" > Registrierung </a>
                 </p>
             </div>
