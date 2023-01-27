@@ -15,7 +15,7 @@ class MitgliederController extends BaseController
         echo view ('templates/footer');
     }
     public function delete(){
-        if(!empty($_GET['id'])){
+        if(!empty($_GET['id']) && $_GET['id'] == $_SESSION['sessUserID']){
             $id = $_GET['id'];
             $mitgliederModel = new MitgliederModel();
             $mitgliederModel -> deleteUser($id);
