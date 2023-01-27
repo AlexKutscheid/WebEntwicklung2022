@@ -13,16 +13,18 @@
             <div class="card-body">
                 <div class="form-group pb-2">
                     <label for="username"> Username </label>
-                    <input type="text" class="form-control" id="username" name="username" \>
+                    <input type="text"  id="username" name="username" class="<?=(isset($error['username']))?'form-control is-invalid':'form-control' ?>" \>
+                    <div class="invalid-feedback"> Bitte eine E-Mail-Adresse angeben </div>
                 </div>
                 <div style="margin-bottom: 20px" class="form-group pb-2">
                     <label for="passwort"> Password: </label>
-                    <input type="password" class="form-control" id="passwort" name="passwort" \>
+                    <input type="password" id="passwort" name="passwort" class="<?=(isset($error['passwort']))?'form-control is-invalid':'form-control' ?>" \>
+                    <div class="invalid-feedback"> Bitte ein Passwort angeben </div>
                 </div>
                 <div sytle="margin-left:10px"  class="form-group form-check my-1">
-                    <input id="agbCheck" name="agbaccept" type="checkbox" class="form-check-input
-                    ">
+                    <input id="agbCheck" name="agbaccept" type="checkbox" class="<?=(isset($error['agbaccept']))?'form-check-input is-invalid':'form-check-input' ?>">
                     <label for="agbCheck" class="form-check-label">AGBs und Datenschutzbedingungen akzeptieren</label>
+                    <div class="invalid-feedback"> Bitte AGBs bestätigen </div>
                 </div>
                 <button id="btnsubmit" name="btnsubmit" type="submit" class="btn btn-primary" style="margin-top: 20px"> Login </button>
                 <p style="margin-top: 20px">

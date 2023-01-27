@@ -41,4 +41,16 @@ class Validation extends BaseConfig
     // --------------------------------------------------------------------
     // Rules
     // --------------------------------------------------------------------
+    public $loginCheck = [
+        'username' => 'required',
+        'passwort' => 'required',
+        'agbaccept' => 'required'];
+    public $loginCheck_errors = [
+        'username' => [
+            'required' => 'Bitte tragen Sie einen Namen ein.'],
+        'passwort' => [
+            'required' => 'Bitte geben Sie ein Passwort ein.'],
+        'agbaccept' => [
+            'required' => 'Bitte bestätigen Sie die AGBs'],
+    ];
 }
