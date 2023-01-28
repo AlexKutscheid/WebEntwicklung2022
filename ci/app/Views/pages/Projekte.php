@@ -54,8 +54,8 @@
                 </div>
 
 
-                <button type="submit" class="btn btn-primary"> Bearbeiten</button>
-                <button type="submit" class="btn btn-danger"> Löschen</button>
+                <button name="bearbeitenButton" type="submit" class="btn btn-primary"> Bearbeiten</button>
+                <button name="löschenButton" type="submit" class="btn btn-danger"> Löschen</button>
 
             <?= form_close() ?>
 

@@ -19,9 +19,18 @@ class ProjekteBearbeitenController extends BaseController
             $data['project'] = $projekteModel->getProjectByName($name);
         }
 
-        echo view ('templates/header',$data);
-        echo view ('pages/ProjekteBearbeiten', $data);
-        echo view ('templates/footer');
+        if(isset($_POST['bearbeitenButton'])){
+            echo view ('templates/header',$data);
+            echo view ('pages/ProjekteBearbeiten', $data);
+            echo view ('templates/footer');
+        }
+        else if(isset($_POST['löschenButton'])){
+            $data = $projekteModel->getProjectByName($_POST['slectedItems']);
+            if($data['ErstellerID'] == $_SESSION['sessUserID']){
+                $projekteModel->deleteProject($data['ID'], $data['Name'], $data['Beschreibung'],$data['ErstellerID']);
+            }
+            return redirect()->to(base_url() . '/Projekte');
+        }
 
     }
 

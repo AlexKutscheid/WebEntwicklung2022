@@ -31,4 +31,10 @@ class ProjekteModel extends Model {
         return $this->projekte->get()->getRowArray();
     }
 
+    public function deleteProject($pID, $pName, $pDesc, $pCreat){
+        $this->projekte = $this->db->table('Projekte');
+        $this->projekte->where('Projekte.ID', $pID);
+        return $this->projekte->delete();
+    }
+
 }
