@@ -56,6 +56,9 @@ $routes->post('/ProjektePost', 'ProjekteController::index');
 $routes->post('/ProjekteEditPost', 'ProjekteBearbeitenController::index');
 $routes->post('/ProjekteEd', 'ProjekteBearbeitenController::editProject');
 
+$routes->get('/AufgabenDel', 'AufgabenController::delete');
+$routes->get('/AufgabenEditController', 'AufgabenEditCreate::index');
+
 
 /*
  * --------------------------------------------------------------------

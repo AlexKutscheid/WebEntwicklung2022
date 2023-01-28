@@ -11,6 +11,11 @@ class MitgliederModel extends Model {
         return $this->mitglieder->get()->getRowArray();
     }
 
+    public function getEveryUser(){
+        $result = $this->db->query('SELECT * FROM Mitglieder');
+        return $result -> getResultArray();
+    }
+
     public function getUserByID($id){
         $this->mitglieder = $this->db->table('Mitglieder');
         $this->mitglieder->select('*');

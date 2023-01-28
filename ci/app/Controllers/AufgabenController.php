@@ -15,4 +15,14 @@ class AufgabenController extends BaseController
         echo view('pages/Aufgaben', $data);
         echo view('templates/footer');
     }
+
+    public function delete(){
+        echo('Delete');
+        if(!empty($_GET['id']) && $_GET['id'] == $_SESSION['sessUserID']){
+            $id = $_GET['id'];
+            $aufgabenModel = new AufgabenModel();
+            $aufgabenModel -> deleteUser($id);
+        }
+        //return redirect()->to(base_url() . '/Mitglieder');
+    }
 }
