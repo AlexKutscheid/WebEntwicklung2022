@@ -17,12 +17,10 @@ class AufgabenController extends BaseController
     }
 
     public function delete(){
-        echo('Delete');
-        if(!empty($_GET['id']) && $_GET['id'] == $_SESSION['sessUserID']){
-            $id = $_GET['id'];
-            $aufgabenModel = new AufgabenModel();
-            $aufgabenModel -> deleteUser($id);
-        }
-        //return redirect()->to(base_url() . '/Mitglieder');
+
+        $aufgabenModel = new aufgabenModel();
+        $aufgabenModel->deleteAufgabe($_GET['id']);
+
+        return redirect()->to(base_url() . '/Aufgaben');
     }
 }

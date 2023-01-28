@@ -9,10 +9,9 @@ class AufgabenModel extends Model
     public function getInfo(): array
     {
         $result = $this->db->query('
-            SELECT Reiter.Name, Aufgaben.Beschreibung, Aufgaben.Aufgabenname, Mitglieder.Username, Aufgaben.ID
-            FROM Reiter JOIN Aufgaben ON Reiter.ID = Aufgaben.ReiterID 
-                JOIN AufgabenMitgliederVK ON Aufgaben.ID = AufgabenMitgliederVK.AufgabenID
-                JOIN Mitglieder ON Mitglieder.ID = AufgabenMitgliederVK.MitgliederID
+            SELECT Aufgaben.Beschreibung, Aufgaben.Aufgabenname, Aufgaben.ID, Reiter.Name, Mitglieder.Username
+            FROM Aufgaben JOIN Reiter ON Reiter.ID = Aufgaben.ReiterID JOIN Mitglieder ON Mitglieder.ID = Aufgaben.ErstellerID
+            
                     
             ');
         return $result->getResultArray();
@@ -30,6 +29,8 @@ class AufgabenModel extends Model
     }
 
     public function deleteAufgabe($aID){
-        echo($aID);
+        $this->aufgaben = $this->db->table('Aufgaben');
+        $this->aufgaben->where('Aufgaben.Id', $aID);
+        return $this->aufgaben->delete();
     }
 }

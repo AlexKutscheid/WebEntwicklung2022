@@ -62,7 +62,6 @@
                                     <a href="<?= base_url("./AufgabenEditController/?id=" .$entry['ID'])?>" class="fa-regular fa-pen-to-square text-primary m-2"></a>
                                 </td>
                             </tr>
-
                         <?php endforeach; endif; ?>
                         </tbody>
 
