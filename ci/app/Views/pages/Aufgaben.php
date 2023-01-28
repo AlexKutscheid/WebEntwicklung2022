@@ -47,10 +47,14 @@
                         <?php if (isset($aufgaben)): foreach ($aufgaben as $entry): ?>
 
                         <tr>
-                            <td style="padding-bottom: 1em; padding-top: 1em"><?= isset($entry['Name']) ? $entry['Name'] : '' ?></td>
+                            <td style="padding-bottom: 1em; padding-top: 1em"><?= isset($entry['Aufgabenname']) ? $entry['Aufgabenname'] : '' ?></td>
                             <td><?= isset($entry['Beschreibung']) ? $entry['Beschreibung'] : '' ?></td>
-                            <td><?= isset($entry['ReiterID']) ? $entry['ReiterID'] : '' ?></td>
-                            <td><?= isset($entry['ErstellerID']) ? $entry['ErstellerID'] : '' ?></td>
+                            <td>
+                                <?= isset($entry['Name']) ? $entry['Name'] : '' ?>
+                            </td>
+                            <td>
+                                <?= isset($entry['Username']) ? $entry['Username'] : '' ?>
+                            </td>
 
                         </tr>
 

@@ -10,6 +10,7 @@ class AufgabenController extends BaseController
         $data['title'] = "Aufgaben";
         $aufgabenModel = new aufgabenModel();
         $data['aufgaben'] = $aufgabenModel->getInfo();
+
         echo view('templates/header', $data);
         echo view('pages/Aufgaben', $data);
         echo view('templates/footer');
