@@ -18,4 +18,8 @@ class AufgabenEditCreate extends BaseController
         echo view('templates/footer');
 
     }
+
+    public function createEdit(){
+        var_dump($_POST);
+    }
 }

@@ -30,6 +30,8 @@
 
     <div class="row">
 
+        <?= form_open('AufgabenEditCreate', array('role' => 'form')) ?>
+
         <form class="form-group">
 
             <h5>Bearbeiten/Erstellen</h5>
@@ -39,20 +41,20 @@
                 <?php if (isset($info)): foreach ($info as $entry): ?>
 
                     <label>Aufgabenbezeichnung:</label>
-                    <input type="text" class="form-control mt-1 mb-3" id="Aufgabenbezeichnung"
+                    <input type="text" class="form-control mt-1 mb-3" id="Aufgabenbezeichnung" name="Aufgabenbezeichnung"
                            value="<?= isset($entry['Aufgabenname']) ? $entry['Aufgabenname'] : '' ?>">
 
 
                     <label>Beschreibung der Aufgabe: </label>
-                    <textarea class="form-control mt-1 mb-3" id="BeschreibungDerAufgabe" rows="3"
+                    <textarea class="form-control mt-1 mb-3" id="BeschreibungDerAufgabe" rows="3" name="Beschreibung"
                               placeholder="Beschreibung"> <?= isset($entry['Beschreibung']) ? $entry['Beschreibung'] : '' ?> </textarea>
 
                     <label>Erstellungsdatum:</label>
-                    <input disabled class="form-control mt-1 mb-3" id="Erstellungsdatum" placeholder="01.01.23">
+                    <input name="Erstellungsdatum"  class="form-control mt-1 mb-3" id="Erstellungsdatum" placeholder="01.01.23">
 
 
                     <label>fällig bis:</label>
-                    <input class="form-control mt-1 mb-3" id="fälligbis" placeholder="01.01.23">
+                    <input name="Fälligkeit" class="form-control mt-1 mb-3" id="fälligbis" placeholder="01.01.23">
 
                     <label>Zugehöriger Reiter</label>
                     <select name="reiter" class="form-select mt-2 mb-2">
@@ -82,8 +84,8 @@
                         ?>
                     </select>
 
-                    <button type="submit" class="btn btn-primary mt-3 mb-2">Erstellen</button>
-                    <button type="submit" class="btn btn-info mt-3 mb-2">Bearbeiten</button>
+                    <button name="btnCreate" type="submit" class="btn btn-primary mt-3 mb-2">Erstellen</button>
+                    <button name="btnEdit" type="submit" class="btn btn-info mt-3 mb-2">Bearbeiten</button>
 
                 <?php endforeach; endif; ?>
 
@@ -91,6 +93,7 @@
 
         </form>
 
+        <?= form_close() ?>
     </div>
 
 </div>
