@@ -35,23 +35,31 @@
         <div class="col-7">
             <!-- hauptkomponente -->
 
-            <div class="form-group">
+            <?= form_open('ProjekteEditPost', array('role' => 'form')) ?>
 
-                <h1> Projekt auswählen: </h1>
-                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                <div class="form-group">
 
-                    <option selected>- bitte auswählen -</option>
-                    <?php if (isset($projects)): foreach ($projects as $entry): ?>
-                        <option> <?= $entry['Name'] ?> </option>
-                    <?php endforeach; endif; ?>
+                     <h1> Projekt auswählen: </h1>
+
+
+                     <select name="slectedItems" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+
+
+                       <?php if (isset($projects)): foreach ($projects as $entry): ?>
+                            <option name="chosenOption"> <?= $entry['Name'] ?> </option>
+                       <?php endforeach; endif; ?>
 
                 </select>
 
-            </div>
+                </div>
 
-            <button type="submit" class="btn btn-primary"> Auswählen</button>
-            <button type="submit" class="btn btn-primary"> Bearbeiten</button>
-            <button type="submit" class="btn btn-danger"> Löschen</button>
+
+                <button type="submit" class="btn btn-primary"> Bearbeiten</button>
+                <button type="submit" class="btn btn-danger"> Löschen</button>
+
+            <?= form_close() ?>
+
+
 
             <h1 id="bm"> Projekt bearbeiten/erstellen: </h1>
 

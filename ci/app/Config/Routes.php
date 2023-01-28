@@ -53,6 +53,9 @@ $routes->post('/RegisterPost', 'RegisterController::index');
 $routes->get('/Edit', 'EditController::index');
 
 $routes->post('/ProjektePost', 'ProjekteController::index');
+$routes->post('/ProjekteEditPost', 'ProjekteBearbeitenController::index');
+$routes->post('/ProjekteEd', 'ProjekteBearbeitenController::editProject');
+
 
 /*
  * --------------------------------------------------------------------
