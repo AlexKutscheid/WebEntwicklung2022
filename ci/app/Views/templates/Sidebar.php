@@ -7,7 +7,7 @@
 
 <div class="list-group">
     <li class="list-group-item"  style="color: dodgerblue">
-        <a style="text-decoration: none" href="Login/"> Login </a>
+        <a style="text-decoration: none <?php if(isset($_SESSION) && $_SESSION['loggedin']) echo(';  color: red') ?>" href="Login/"> <?php if(isset($_SESSION) && $_SESSION['loggedin']){ echo('Logout');}else{echo('Login');}  ?> </a>
     </li>
     <li class="list-group-item" style="color: dodgerblue">
         <a style="text-decoration: none" href="Projekte"> Projekte </a>

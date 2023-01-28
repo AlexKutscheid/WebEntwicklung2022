@@ -10,6 +10,10 @@ class LoginController extends BaseController
     }
     public function index()
     {
+        if(isset($_SESSION) && isset($_SESSION['loggedin'])){
+            session_destroy();
+        }
+
         if(!empty($_POST)){
             if ($this->validation->run($_POST, 'loginCheck')) {
 
@@ -32,9 +36,11 @@ class LoginController extends BaseController
             }
         }
 
+
         $data['title'] = "Login";
         echo view('templates/header', $data);
         echo view('pages/Login', $data);
         echo view('templates/footer');
+
     }
 }
