@@ -36,7 +36,17 @@ class AufgabenEditCreate extends BaseController
             return redirect()->to(base_url() . '/Aufgaben');
         }
         else if(isset($_POST['btnCreate'])){
-            $aufgabenModel->createAufgabe();
+
+            $aufgabenName = $_POST['Aufgabenbezeichnung'];
+            $beschreibung = $_POST['Beschreibung'];
+            $crDate = $_POST['Erstellungsdatum'];
+            $dueDate = $_POST['Fälligkeit'];
+
+
+            $ersteller=$aufgabenModel->getErstellerID($_POST['zuständig']);
+            $reiter=$aufgabenModel->getReiterID($_POST['reiter']);
+            $aufgabenModel->createAufgabe($reiter[0]['ID'], $aufgabenName, $beschreibung, $crDate, $dueDate, $ersteller[0]['ID']);
+            return redirect()->to(base_url() . '/Aufgaben');
         }
     }
 }
