@@ -87,6 +87,10 @@
                     <button name="btnCreate" type="submit" class="btn btn-primary mt-3 mb-2">Erstellen</button>
                     <button name="btnEdit" type="submit" class="btn btn-info mt-3 mb-2">Bearbeiten</button>
 
+
+                    <input type="hidden" class="form-control mt-1 mb-3" id="ogAufgabe" name="ogAufgabe"
+                           value="<?= isset($entry['Aufgabenname']) ? $entry['Aufgabenname'] : '' ?>">
+
                 <?php endforeach; endif; ?>
 
             </div>
