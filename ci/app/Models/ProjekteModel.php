@@ -9,7 +9,7 @@ class ProjekteModel extends Model {
     }
     public function insertNewProject(){
         $this->projects = $this->db->table('Projekte');
-        $this->projects->insert(array('Name' => $_POST['Projektname'], 'Beschreibung' => $_POST['Projektbeschreibung'], 'ErstellerID' => $_SESSION['sessUserID']));
+        return $this->projects->insert(array('Name' => $_POST['Projektname'], 'Beschreibung' => $_POST['Projektbeschreibung'], 'ErstellerID' => $_SESSION['sessUserID']));
     }
 
     public function editProject($pName, $pDesc, $pCreatorID, $pID){
