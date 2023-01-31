@@ -27,7 +27,7 @@
 
 <body>
 
-<div class="col">
+<div class="col-8">
 
     <div class="row">
 

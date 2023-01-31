@@ -32,9 +32,9 @@
 
 <body>
 
-        <div class="col">
+        <div class="col-8">
             <div class="row">
-                <form class="form-group">
+                <row class="form-group">
                     <table class="table table-hover">
                         <tr class="table-light">
                             <!-- th scope = col sorgt dafür das Überschrift der table ganze Spalte vereinnahmt, also sorgt für Abstand zw Beschreibung und Name -->
@@ -62,7 +62,11 @@
                         <?php endforeach; endif; ?>
                         </tbody>
                     </table>
-
+                </row>
+            </div>
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col">
                     <h1 id="bm"> Bearbeiten/Erstellen: </h1>
 
                     <div class="col-8">
@@ -93,6 +97,7 @@
                     </div>
 
                 </form>
+            </div>
             </div>
         </div>
     </div>

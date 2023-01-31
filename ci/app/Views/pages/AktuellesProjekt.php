@@ -11,50 +11,61 @@
 
 </head>
 <body>
-            <div class="col">
-                <div class="card">
-                    <div class="card-header">
-                        ToDo:
-                    </div>
-                    <div class="list-group">
-                        <li class="list-group-item">
-                            HTML Datei erstellen (Max Mustermann)
-                        </li>
-                        <li class="list-group-item">
-                            CSS Datei erstellen (Max Mustermann)
-                        </li>
-                    </div>
-                </div>
-            </div>
+        <div class="col-8">
 
-            <div class="col-3">
-                <div class="card">
-                    <div class="card-header">
-                        Erledigt:
-                    </div>
-                    <div class="list-group">
-                        <li class="list-group-item">
-                            PC eingeschaltet (Petra Müller)
-                        </li>
-                        <li class="list-group-item">
-                            Kaffee trinken (Petra Müller)
-                        </li>
-                    </div>
-                </div>
-            </div>
+            <div class="row">
+                <div class="col-4">
 
-            <div class="col">
-                <div class="card">
-                    <div class="card-header">
-                        Verschoben:
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            ToDo:
+                        </div>
+                        <div class="list-group">
+
+                            <div class="list-group-item">HTML Datei erstellen (Alex)</div>
+
+
+                            <div class="list-group-item">CSS Datei erstellen (Fynn)</div>
+
+
+                            <div class="list-group-item">Jumbotron hinzufügen (Alex)</div>
+
+                        </div>
                     </div>
-                    <div class="list-group">
-                        <li class="list-group-item">
-                            Für die Uni lernen! (Max Mustermann)
-                        </li>
+
+                </div>
+                <div class="col-4">
+
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            Erledigt:
+                        </div>
+                        <div class="list-group">
+
+                            <div class="list-group-item">PC einschalten (Lisa)</div>
+                            <div class="list-group-item">Kaffee trinken (Fynn)</div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-4">
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            Verschoben:
+                        </div>
+                        <div class="list-group">
+
+                            <div class="list-group-item">Für die Uni lernen (Rufus)</div>
+                            <div class="list-group-item">Essen machen (Fynn)</div>
+
+                        </div>
                     </div>
                 </div>
+
             </div>
+        </div>
 
         </div>
     </div>

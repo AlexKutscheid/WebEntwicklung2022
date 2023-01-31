@@ -31,8 +31,7 @@
 
 <body>
 
-
-        <div class="col-7">
+        <div class="col-8">
             <!-- hauptkomponente -->
 
             <?= form_open('ProjekteEditPost', array('role' => 'form')) ?>
@@ -78,9 +77,9 @@
                 <button type="submit" class="btn btn-primary" name="submitProjects"> Erstellen </button>
             <?= form_close() ?>
 
-
-
         </div>
+
+
     </div>
 </div>
 

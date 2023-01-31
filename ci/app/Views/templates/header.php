@@ -26,8 +26,12 @@
     <!-- Row Container mit Menü ganz links -->
     <div class="row">
         <!-- Col mit Menü -->
-        <div class="col-3">
+        <div class="col-2"></div>
+        <div class="col-8">
             <!-- Ausgelagertes Menü -->
             <?php if ($title != "Login" && $title != "Registrieren"){
                 include('Sidebar.php');} ?>
         </div>
+        <div class="col-2"></div>
+
+        <div class="col-2"></div>
